@@ -1,3 +1,104 @@
+/* Copyright (c) 2022 Sharpened Blade */
+  
+:root {
+    --nord0: #2e3440;
+    --nord1: #3b4252;
+    --nord2: #434c5e;
+    --nord3: #4c566a;
+
+    --nord4: #d8dee9;
+    --nord5: #e5e9f0;
+    --nord6: #eceff4;
+ 
+    --nord7: #8fbcbb;
+    --nord8: #88c0d0;
+    --nord9: #81a1c1;
+    --nord10: #5e81ac;
+
+    --nord11: #bf616a;
+    --nord12: #d08770;
+    --nord13: #ebcb8b;
+    --nord14: #a3be8c;
+    --nord15: #b48ead;
+
+    --bg0: var(--nord0);
+    --bg1: var(--nord1);
+    --text0: var(--nord4);
+    --text1: var(--nord6);
+    --accent0: var(--nord8);
+    --accent1: var(--nord9);
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --bg0: var(--nord6);
+        --bg1: var(--nord4);
+        --text0: var(--nord1);
+        --text1: var(--nord2);
+        --accent0: var(--nord10);
+        --accent1: var(--nord9);
+    }
+}
+
 body {
-    font-family: Cantarell, sans-serif;
+    font-family: monospace;
+    background: var(--bg0);
+    color: var(--text0);
+    display:flex;
+    flex-direction:column;
+    min-height:100vh;
+    margin: 0px;
+}
+a {
+    color: var(--accent0);
+}
+
+main {
+    flex:1;
+    margin: 0.5rem;
+}
+
+header {
+    background: var(--bg1);
+    color: var(--text1);
+    border: 0.15rem solid var(--accent1);
+    border-radius: 0.5rem;
+    margin: 0.5rem;
+}
+
+h1 {
+    color: var(--text1);
+}
+
+#header-name {
+    color: var(--text1)
+}
+
+.header-link {
+    color: var(--text1)
+}
+article {
+    margin: 1rem 0rem;
+
+}
+.article-link {
+    color: var(--accent0);
+}
+
+.article-info {
+    font-size: 0.75rem;
+    padding: 0px;
+    margin: 0.2rem 0rem;
+}
+
+footer {
+    background: var(--bg1);
+    color: var(--text1);
+    margin: 0px;
+    border: 0px;
+    padding: 0px;
+}
+
+#name {
+    margin: 0rem 0rem 0.5rem 0rem;
 }
