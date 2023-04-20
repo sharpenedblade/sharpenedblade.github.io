@@ -2,12 +2,12 @@
 title: Home
 layout: layout.liquid
 ---
-{% for post in collections.posts %}
+{% for article in collections.articles %}
     <article>
         <div class="article-header">
-            <time class="article-date" datetime="{{ post.date }}">{{ post.date | date: "%Y-%m-%d" }}</time>
-            <a class="article-title" href="{{ post.url }}">{{ post.data.title }}</a>
+            <time class="article-date" datetime="{{ article.date }}">{{ article.date | date: "%Y-%m-%d" }}</time>
+            <a class="article-title" href="{{ article.url }}">{{ article.data.title }}</a>
         </div>
-        <p class="article-description">{{ post.data.description }}</p>
+        <p class="article-description">{{ article.data.description }}</p>
     </article>
 {% endfor %}
