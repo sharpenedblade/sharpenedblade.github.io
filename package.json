@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/sharpenedblade/sharpenedblade.github.io#readme",
   "devDependencies": {
-    "@11ty/eleventy": "^1.0.2"
+    "@11ty/eleventy": "^1.0.2",
+    "sass": "^1.57.1"
   }
 }

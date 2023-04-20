@@ -1,0 +1,95 @@
+/* Copyright (c) 2022 Sharpened Blade */
+  
+// Catppuccin Mocha
+// https://github.com/catppuccin/palette/blob/main/scss/_mocha.scss
+
+$rosewater: #f5e0dc;
+$flamingo: #f2cdcd;
+$pink: #f5c2e7;
+$mauve: #cba6f7;
+$red: #f38ba8;
+$maroon: #eba0ac;
+$peach: #fab387;
+$yellow: #f9e2af;
+$green: #a6e3a1;
+$teal: #94e2d5;
+$sky: #89dceb;
+$sapphire: #74c7ec;
+$blue: #89b4fa;
+$lavender: #b4befe;
+$text: #cdd6f4;
+$subtext1: #bac2de;
+$subtext0: #a6adc8;
+$overlay2: #9399b2;
+$overlay1: #7f849c;
+$overlay0: #6c7086;
+$surface2: #585b70;
+$surface1: #45475a;
+$surface0: #313244;
+$base: #1e1e2e;
+$mantle: #181825;
+$crust: #11111b;
+
+
+body {
+    font-family: monospace;
+    background: $base;
+    color: $text;
+    display:flex;
+    flex-direction:column;
+    min-height:100vh;
+    margin: 0px;
+}
+
+a {
+    color: $rosewater;
+}
+
+main {
+    flex:1;
+    margin: 0.5rem;
+}
+
+header {
+    background: $base;
+    color: $text;
+    border: 0.15rem solid $lavender;
+    border-radius: 0.5rem;
+    margin: 0.5rem;
+}
+#header-name {
+    color: $text
+}
+.header-link {
+    color: $subtext0
+}
+
+
+h1 {
+    color: $text;
+}
+
+article {
+    margin: 1rem 0rem;
+
+}
+.article-link {
+    color: $rosewater;
+}
+.article-info {
+    font-size: 0.9rem;
+    padding: 0px;
+    margin: 0.2rem 0rem;
+}
+
+footer {
+    background: $mantle;
+    color: $subtext0;
+    margin: 0px;
+    border: 0px;
+    padding: 0px;
+}
+
+#name {
+    margin: 0rem 0rem 0.5rem 0rem;
+}
