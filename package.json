@@ -1,0 +1,23 @@
+{
+  "name": "sharpenedblade.github.io",
+  "version": "1.0.0",
+  "description": "Sharpened Blade's website.",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx @11ty/eleventy --serve",
+    "build": "npx @11ty/eleventy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sharpenedblade/sharpenedblade.github.io.git"
+  },
+  "author": "sharpenedblade",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sharpenedblade/sharpenedblade.github.io/issues"
+  },
+  "homepage": "https://github.com/sharpenedblade/sharpenedblade.github.io#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^1.0.2"
+  }
+}

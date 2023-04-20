@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<!-- Copyright (c) 2022 Sharpened Blade -->
+<html lang="en">
+    <head>
+        <title>Sharpened Blade - {{ title }}</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+        <center>
+        <div style="display: inline-block; vertical-align: middle; padding: 10px;" >
+            <a id="header-name" href="/index.html"><b>Sharpened Blade</b></a>
+            <nav>
+                {% for about in collections.about %}
+                    <a class="header-link" href="{{ about.url }}">{{ about.data.title }}</a>
+                {% endfor %}
+            </nav>
+        </div>
+        </center>
+        </header>
+
+        <main>
+            {{ content }}
+        </main>
+
+        <footer>
+        <center>
+            <p>Sharpened Blade's website.</p>
+        </center>
+        </footer>
+    </body>
+</html>
