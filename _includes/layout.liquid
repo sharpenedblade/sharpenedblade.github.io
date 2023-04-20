@@ -9,26 +9,22 @@
     </head>
     <body>
         <header>
-        <center>
-        <div style="display: inline-block; vertical-align: middle; padding: 10px;" >
-            <a id="header-name" href="/index.html"><b>Sharpened Blade</b></a>
+            <a href="/index.html"><b>Sharpened Blade</b></a>
             <nav>
                 {% for about in collections.about %}
-                    <a class="header-link" href="{{ about.url }}">{{ about.data.title }}</a>
+                    <a href="{{ about.url }}">{{ about.data.title }}</a>
                 {% endfor %}
             </nav>
-        </div>
-        </center>
         </header>
 
         <main>
-            {{ content }}
+            <div id="content">
+                {{ content }}
+            </div>
         </main>
 
         <footer>
-        <center>
             <p>Sharpened Blade's website.</p>
-        </center>
         </footer>
     </body>
 </html>
