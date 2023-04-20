@@ -9,11 +9,10 @@
     </head>
     <body>
         <header>
-            <a href="/index.html"><b>Sharpened Blade</b></a>
+            <b>Sharpened Blade's Website</b>
             <nav>
-                {% for about in collections.about %}
-                    <a href="{{ about.url }}">{{ about.data.title }}</a>
-                {% endfor %}
+                <a href="/">Home</a>
+                <a href="/about">About</a>
             </nav>
         </header>
 
@@ -24,7 +23,7 @@
         </main>
 
         <footer>
-            <p>Sharpened Blade's website.</p>
+            <p>Sharpened Blade's website and blog. <a href="https://github.com/sharpenedblade/sharpenedblade.github.io">Source code</a> for this website.</p>
         </footer>
     </body>
 </html>

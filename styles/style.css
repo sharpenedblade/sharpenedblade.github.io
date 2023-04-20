@@ -2,23 +2,26 @@
   
 /* Light */
 :root {
-    --base: #ffffff;
-    --elevated: #f4f4f4;
-    --bg-code: #efefef;
-    --text: #1a1a1a;
-    --accent: #0000ff;
-    --link: #0000ff;
+    --base: #111111;
+    --elevated: #1f1f1f;
+    --elevated: #2c2c2c;
+    --text: #cfcfcf;
+    --text-hidden: #808080;
+    --accent: #6666ff;
+    --link: #6666ff;
+    font-size: 18px;
 }
 
 /* Dark */
 @media (prefers-color-scheme: dark) {
     :root {
-        --base: #191919;
-        --elevated: #262626;
-        --bg-code: #2c2c2c;
-        --text: #eeeeee;
+        --base: #1f1f1f;
+        --elevated: #333333;
+        --code: #2a2a2a;
+        --text: #dadada;
+        --text1: #aaaaaa;
+        --elevated-text: #eeeeee;
         --accent: #6666ff;
-        --link: #6666ff;
     }
  }
 
@@ -50,15 +53,12 @@
   src: url("/fonts/JetBrainsMono-Regular.woff2") format("woff2");
 }
 
+/* Font styling */
 body {
-    font-family: Inter;
+    font-family: Jetbrains Mono;
     font-size: 1rem;
     background: var(--base);
     color: var(--text);
-    display:flex;
-    flex-direction:column;
-    min-height:100vh;
-    margin: 0px;
 }
 
 a {
@@ -66,27 +66,26 @@ a {
 }
 
 h1 {
-    color: var(--text);
-    font-size: 2rem;
-}
-
-h1 code {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
 }
 
 h2 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
 }
 
-h2 code {
-    font-size: 1.25rem;
+/* Layout */
+body {
+    flex-direction:column;
+    display:flex;
+    min-height:100vh;
+    margin: 0px;
 }
 
 main {
     flex:1;
     margin: 0.5rem;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 15%;
+    margin-right: 15%;
     justify-content: center;
 }
 
@@ -94,29 +93,35 @@ main {
     justify-content: flex-start;
 }
 
-header {
+/* Page header */
+header, header a{
     background: var(--elevated);
-    color: var(--text);
+    color: var(--elevated-text);
     text-align: center;
-    padding: 10px;
+    padding: 0.3rem;
+    display: inline-block;
+    font-size: 1rem;
 }
 
-header a {
-    color: var(--text)
+nav {
+    display: inline-block
 }
 
-footer {
+/* Page footer */
+footer, footer a {
     background: var(--elevated);
-    color: var(--text);
+    color: var(--elevated-text);
     text-align: center;
+    font-size: 0.8rem;
     margin: 0px;
     border: 0px;
     padding: 0px;
 }
 
+/* Code blocks */
 code {
     border-radius: 6px;
-    background: var(--bg-code);
+    background: var(--code);
     padding: 0px 3px 0px 3px;
     font-family: Jetbrains Mono;
     font-size: 13px;
@@ -124,7 +129,7 @@ code {
 
 pre {
     border-radius: 6px;
-    background: var(--bg-code);
+    background: var(--code);
     padding: 3px;
     max-width: 60%;
     overflow: auto;
@@ -132,4 +137,25 @@ pre {
 
 pre code {
     border: none;
+}
+
+/* Article listing */
+.article-title {
+    font-size: 1.2rem;
+    color: var(--text);
+    font-weight: bold;
+}
+
+.article-description {
+    font-size: 1rem;
+    margin: 0 1rem;
+}
+
+.article-date {
+    font-size: 0.9rem;
+    color: var(--text1);
+}
+
+article {
+    margin: 2rem 0 0 0;
 }
