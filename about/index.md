@@ -14,7 +14,7 @@ I made this website with [11ty](https://11ty.dev), markdown, and neovim. The con
 
 I will *try* to respond somewhat quickly, but I am somewhat busy right now. Please encrypt any sensitive information and attach your gpg key. If you do not get an response within 2 weeks, send your email again. **Do not** send spam or marketing to me, it is going to get blocked. 
 
-My GPG key fingerprint is `BDC3 73CA 7DF3 4A85 2B7E  AC86 5060 D3E2 1F6E D8FD`.
+My GPG key fingerprint is `03DD0873D69021C91759BA22CE6D7CB6A35EF8DD`.
 
 Matrix: [@sharpenedblade:matrix.org](https://matrix.to/#/@sharpenedblade:matrix.org)
 
