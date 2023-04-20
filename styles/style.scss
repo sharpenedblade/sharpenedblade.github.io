@@ -41,14 +41,27 @@ body {
     margin: 0px;
 }
 
+
+
 a {
     color: $rosewater;
 }
+
+h1 {
+    color: $text;
+}
+
+
+#name {
+    margin: 0rem 0rem 0.5rem 0rem;
+}
+
 
 main {
     flex:1;
     margin: 0.5rem;
 }
+
 
 header {
     background: $base;
@@ -57,30 +70,31 @@ header {
     border-radius: 0.5rem;
     margin: 0.5rem;
 }
+
 #header-name {
-    color: $text
+    color: $subtext1
 }
+
 .header-link {
     color: $subtext0
 }
 
 
-h1 {
-    color: $text;
-}
-
 article {
     margin: 1rem 0rem;
 
 }
+
 .article-link {
     color: $rosewater;
 }
+
 .article-info {
     font-size: 0.9rem;
     padding: 0px;
     margin: 0.2rem 0rem;
 }
+
 
 footer {
     background: $mantle;
@@ -88,8 +102,4 @@ footer {
     margin: 0px;
     border: 0px;
     padding: 0px;
-}
-
-#name {
-    margin: 0rem 0rem 0.5rem 0rem;
 }
