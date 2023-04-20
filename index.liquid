@@ -1,0 +1,11 @@
+---
+title: Home
+layout: layout.liquid
+---
+<h1 id ="name"> sharpenedblade.github.io </h1>
+{% for post in collections.posts %}
+    <article>
+        <a class="article-link" href="{{ post.url }}" style="font-size: 1rem; margin: 0rem;">{{ post.data.title }}</a>
+        <p class="article-info">{{ post.date | date: "%Y-%m-%d" }} - {{ post.data.description }}</p>
+    </article>
+{% endfor %}
