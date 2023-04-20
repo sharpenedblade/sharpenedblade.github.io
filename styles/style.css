@@ -28,12 +28,20 @@
 
 /* Inter font */
 @font-face {
-  font-family: 'Cantarell';
+  font-family: 'Inter';
   font-weight: 100 900;
   font-display: swap;
   font-style: normal;
   font-named-instance: 'Regular';
-  src: url("/fonts/Cantarell-VF.otf") format("otf");
+  src: url("/fonts/Inter-roman.var.woff2?v=3.19") format("woff2");
+}
+@font-face {
+  font-family: 'Inter';
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: italic;
+  font-named-instance: 'Italic';
+  src: url("/fonts/Inter-italic.var.woff2?v=3.19") format("woff2");
 }
 
 /* Jetbrain Mono font */
@@ -52,11 +60,6 @@ body {
     font-size: 1rem;
     background: var(--base);
     color: var(--text);
-}
-
-#content p {
-    font-family: Cantarell;
-    font-size: 1.05rem;
 }
 
 a {
