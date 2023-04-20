@@ -8,7 +8,7 @@ Modern linux distributions sign the kernel and the bootloader/shim, but leave th
 
 Why don't distros just fix this security problem on supported hardware? It's *complicated*, but some distros are working on it. The existing solution to encrypt all of `/boot` is very fragile, and it also relies on support in `GRUB2`. There is a better way to fix the initrd hole, using modern UEFI features, without invasive system changes. How? By using `systemd-boot`, `sbctl`, `dracut`, and some clever scripts. We are going to create and sign a unified kernel image, then boot it with `systemd-boot`.
 
-### Disclaimer
+## Disclaimer
 
 *I am not responsible for any bricked computers, loss of important data, wasted time, and/or other problems caused by this article. The views expressed in this article are mine and mine alone.*
 
@@ -16,7 +16,7 @@ Why don't distros just fix this security problem on supported hardware? It's *co
 
 You need to be running a modern Fedora system, preferably at least Fedora 36. You also need reasonable modern UEFI hardware. This method only works with x86_64 compatible CPUs, and your firmware has to be in secure boot `setup` mode.
 
-## Replacing `GRUB2` with `systemd-boot`
+## Replacing GRUB with systemd-boot
 
 First, move the EFI system partition to `/efi`.
 
@@ -39,7 +39,7 @@ sudo bootctl install
 
 After running this you need to reinstall the kernel with `sudo dnf reinstall kernel-core`. This makes sure the kernel is installed to the right spot in the ESP.
 
-## Signing the bootloader
+### Signing the bootloader
 
 First we have to install some utilities to help us sign the bootloader. Install [`sbctl`](https://github.com/Foxboron/sbctl), at the time of writing(2023-02-16) there are no packages for Fedora, so you have to compile and install it yourself.
 
@@ -50,7 +50,7 @@ sbctl sign -s /efi/EFI/systemd/systemd-bootx64.efi
 sbctl sign -s /efi/EFI/BOOT/BOOTX64.EFI
 ```
 
-## Signing fwupd
+### Signing fwupd
 
 `fwupd` is used to update the system with new firmware from the vendor, so it is highly recomended to use `fwupd`. It is run at boot time so it has to be signed.
 
