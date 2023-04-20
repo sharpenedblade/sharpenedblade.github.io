@@ -6,7 +6,7 @@ layout: layout.liquid
 
 ## This website
 
-I write about topics related to linux, free software, and video games. If you spot an error or want to suggest an improvement, open an issue or send me an email. 
+I write about topics related to linux and free software. If you spot an error or want to suggest an improvement, open an issue or send me an email. 
 
 I made this website with [11ty](https://11ty.dev), markdown, and neovim. The content on this website (unless otherwise specified) is licensed under [CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/) and the code is under the MIT license. The source code is available on [Github](https://github.com/sharpenedblade/sharpenedblade.github.io).
 
