@@ -1,5 +1,5 @@
 ---
-title: Building EDK2 with GCC 12
+title: How to build EDK2 with GCC 12
 date: 2023-04-16
 description: How to build tianocore on a modern linux system.
 ---
