@@ -1,29 +1,30 @@
 /* Copyright (c) 2022-2023 Sharpened Blade */
   
 /* Light */
-:root {
-    --base: #111111;
-    --elevated: #1f1f1f;
-    --elevated: #2c2c2c;
-    --text: #cfcfcf;
-    --text-hidden: #808080;
-    --accent: #6666ff;
-    --link: #6666ff;
-    font-size: 18px;
+@media (prefers-color-scheme: light) {
+    :root {
+        --base: var(--nord6);
+        --text: var(--nord0);
+        --text-low-pri: var(--nord1);
+        --elevated: var(--nord4);
+        --elevated-text: var(--nord0);
+        --code-bg: var(--nord4);
+        --link: var(--nord10);
+    }
 }
 
 /* Dark */
 @media (prefers-color-scheme: dark) {
     :root {
-        --base: #1f1f1f;
-        --elevated: #333333;
-        --code: #2a2a2a;
-        --text: #dadada;
-        --text1: #aaaaaa;
-        --elevated-text: #eeeeee;
-        --accent: #6666ff;
+        --base: var(--nord0);
+        --text: var(--nord5);
+        --text-low-pri: var(--nord4);
+        --elevated: var(--nord1);
+        --elevated-text: var(--nord6);
+        --code-bg: var(--nord1);
+        --link: var(--nord8);
     }
- }
+}
 
 /* Inter font */
 @font-face {
@@ -121,7 +122,7 @@ footer, footer a {
 /* Code blocks */
 code {
     border-radius: 6px;
-    background: var(--code);
+    background: var(--code-bg);
     padding: 0px 3px 0px 3px;
     font-family: Jetbrains Mono;
     font-size: 13px;
@@ -129,7 +130,7 @@ code {
 
 pre {
     border-radius: 6px;
-    background: var(--code);
+    background: var(--code-bg);
     padding: 3px;
     max-width: 60%;
     overflow: auto;
@@ -142,7 +143,7 @@ pre code {
 /* Article listing */
 .article-title {
     font-size: 1.2rem;
-    color: var(--text);
+    /* color: var(--text); */
     font-weight: bold;
 }
 
@@ -153,7 +154,7 @@ pre code {
 
 .article-date {
     font-size: 0.9rem;
-    color: var(--text1);
+    color: var(--text-low-pri);
 }
 
 article {
