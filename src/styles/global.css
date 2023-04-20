@@ -1,0 +1,85 @@
+/* Copyright (c) 2022-2023 Sharpened Blade */
+
+/* Light */
+@media (prefers-color-scheme: light) {
+    :root {
+        --base: var(--nord6);
+        --text: var(--nord0);
+        --text-low-pri: var(--nord1);
+        --elevated: var(--nord4);
+        --elevated-text: var(--nord0);
+        --code-bg: var(--nord4);
+        --link: var(--nord10);
+    }
+}
+
+/* Dark */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --base: var(--nord0);
+        --text: var(--nord5);
+        --text-low-pri: var(--nord4);
+        --elevated: var(--nord1);
+        --elevated-text: var(--nord6);
+        --code-bg: var(--nord1);
+        --link: var(--nord8);
+    }
+}
+
+/* Font styling */
+body {
+    font-family: Jetbrains Mono;
+    font-size: 1rem;
+    background: var(--base);
+    color: var(--text);
+}
+
+a {
+    color: var(--link);
+}
+
+h1 {
+    font-size: 1.7rem;
+}
+
+h2 {
+    font-size: 1.3rem;
+}
+
+
+/* Code blocks */
+code {
+    border-radius: 6px;
+    background: var(--code-bg);
+    padding: 0px 3px 0px 3px;
+    font-family: Jetbrains Mono;
+    font-size: 13px;
+}
+
+pre {
+    border-radius: 6px;
+    background: var(--code-bg);
+    padding: 3px;
+    max-width: 60%;
+    overflow: auto;
+}
+
+pre code {
+    border: none;
+}
+
+/* Layout */
+body {
+    margin: 0px;
+}
+
+main {
+    flex: 1;
+    margin: 0.5rem;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+nav {
+    display: inline-block;
+}

@@ -1,24 +1,37 @@
 {
-  "name": "sharpenedblade-website",
-  "version": "1.0.0",
-  "description": "Sharpened Blade's website.",
-  "main": "index.js",
-  "scripts": {
-    "start": "npx @11ty/eleventy --serve",
-    "build": "npx @11ty/eleventy"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/sharpenedblade/sharpenedblade.github.io.git"
-  },
-  "author": "sharpenedblade",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/sharpenedblade/sharpenedblade.github.io/issues"
-  },
-  "homepage": "https://github.com/sharpenedblade/sharpenedblade.github.io#readme",
-  "devDependencies": {
-    "@11ty/eleventy": "^1.0.2",
-    "sass": "^1.57.1"
-  }
+    "name": "sharpenedblade-website",
+    "private": true,
+    "version": "2.0.0",
+    "description": "Sharpened Blade's website.",
+    "main": "index.js",
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "lint": "next lint"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/sharpenedblade/sharpenedblade.github.io.git"
+    },
+    "author": "sharpenedblade",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/sharpenedblade/sharpenedblade.github.io/issues"
+    },
+    "homepage": "https://github.com/sharpenedblade/sharpenedblade.github.io#readme",
+    "dependencies": {
+        "eslint": "^8.38.0",
+        "eslint-config-next": "^13.3.0",
+        "gray-matter": "^4.0.3",
+        "next": "^13.3.0",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "remark": "^14.0.2",
+        "remark-html": "^15.0.2"
+    },
+    "devDependencies": {
+        "eslint-config-prettier": "^8.8.0",
+        "prettier": "^2.8.7"
+    }
 }

@@ -1,35 +1,35 @@
-name: Build Eleventy
+name: Build Static HTML export
 on:
-  push:
-    branches:
-      - main
+    push:
+        branches:
+            - main
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
+    build:
+        runs-on: ubuntu-latest
 
-    permissions:
-      pages: write
-      id-token: write
+        permissions:
+            pages: write
+            id-token: write
 
-    steps:
-      - name: checkout
-        uses: actions/checkout@v3
+        steps:
+            - name: checkout
+              uses: actions/checkout@v3
 
-      - name: setup
-        uses: actions/setup-node@v3
-        with:
-          node-version: 16
+            - name: setup
+              uses: actions/setup-node@v3
+              with:
+                  node-version: 16
 
-      - name: build
-        run: |
-          npm install
-          npm run build
+            - name: build
+              run: |
+                  npm install
+                  npm run build
 
-      - name: deploy
-        uses: actions/upload-pages-artifact@v1
-        with:
-          path: ./_site
+            - name: deploy
+              uses: actions/upload-pages-artifact@v1
+              with:
+                  path: ./out
 
-      - name: publish
-        uses: actions/deploy-pages@v1
+            - name: publish
+              uses: actions/deploy-pages@v1
