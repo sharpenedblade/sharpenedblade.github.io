@@ -2,7 +2,7 @@
 title: Home
 layout: layout.liquid
 ---
-{% for article in collections.articles %}
+{% for article in collections.articles reversed %}
     <article>
         <div class="article-header">
             <time class="article-date" datetime="{{ article.date }}">{{ article.date | date: "%Y-%m-%d" }}</time>
