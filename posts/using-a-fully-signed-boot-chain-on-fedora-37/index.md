@@ -73,8 +73,6 @@ wget "https://gist.githubusercontent.com/sharpenedblade/3340f3235d7d5781c6e66547
 
 ## Preparing to reboot
 
-You have to reinstall the kernel for the changes we just made to apply. **You can reboot your computer after this step.**
+You have to reinstall the kernel for the changes we just made to apply. **You can reboot your computer after this step.** 
 
-```
-dnf reinstall kernel-core
-```
+Run `dnf reinstall kernel-core`
