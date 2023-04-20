@@ -2,10 +2,12 @@
 title: Home
 layout: layout.liquid
 ---
-<h1 id ="name"> sharpenedblade.github.io </h1>
 {% for post in collections.posts %}
     <article>
-        <a href="{{ post.url }}" >{{ post.data.title }}</a>
-        <p>{{ post.date | date: "%Y-%m-%d" }} - {{ post.data.description }}</p>
+        <div class="article-header">
+            <time class="article-date" datetime="{{ post.date }}">{{ post.date | date: "%Y-%m-%d" }}</time>
+            <a class="article-title" href="{{ post.url }}">{{ post.data.title }}</a>
+        </div>
+        <p class="article-description">{{ post.data.description }}</p>
     </article>
 {% endfor %}
