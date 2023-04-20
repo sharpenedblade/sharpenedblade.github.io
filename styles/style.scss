@@ -32,7 +32,8 @@ $crust: #11111b;
 
 
 body {
-    font-family: monospace;
+    font-family: Cantarell;
+    font-size: 15px;
     background: $base;
     color: $text;
     display:flex;
@@ -102,4 +103,12 @@ footer {
     margin: 0px;
     border: 0px;
     padding: 0px;
+}
+
+code {
+    border-radius: 6px;
+    border: 2px solid $surface1;
+    padding: 3px;
+    font-family: Jetbrains Mono;
+    font-size: 13px;
 }
