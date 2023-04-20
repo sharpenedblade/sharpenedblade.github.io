@@ -1,16 +1,16 @@
 ---
 title: Using a Fully Signed Boot Chain on Fedora 37
-date: 2023-02-16
+date: "2023-02-16"
 description: The tooling for a fully signed boot chain already exists, how do we use it?
 ---
 
 Modern linux distributions sign the kernel and the bootloader/shim, but leave the initrd completely unprotected. If the initrd is comprimised, then an attacker can steal your LUKS passphrase, tamper with the rest of you system, or do other bad things. It has been technically possible to fix this massive security hole for a long time, so why don't popular distributions do something about it? It turns out that fixing the gaping initrd hole might prevent people from running these distros on old/niche hardware.
 
-Why don't distros just fix this security problem on supported hardware? It's *complicated*, but some distros are working on it. The existing solution to encrypt all of `/boot` is very fragile, and it also relies on support in `GRUB2`. There is a better way to fix the initrd hole, using modern UEFI features, without invasive system changes. How? By using `systemd-boot`, `sbctl`, `dracut`, and some clever scripts. We are going to create and sign a unified kernel image, then boot it with `systemd-boot`.
+Why don't distros just fix this security problem on supported hardware? It's _complicated_, but some distros are working on it. The existing solution to encrypt all of `/boot` is very fragile, and it also relies on support in `GRUB2`. There is a better way to fix the initrd hole, using modern UEFI features, without invasive system changes. How? By using `systemd-boot`, `sbctl`, `dracut`, and some clever scripts. We are going to create and sign a unified kernel image, then boot it with `systemd-boot`.
 
 ## Disclaimer
 
-*I am not responsible for any bricked computers, loss of important data, wasted time, and/or other problems caused by this article. The views expressed in this article are mine and mine alone.*
+_I am not responsible for any bricked computers, loss of important data, wasted time, and/or other problems caused by this article. The views expressed in this article are mine and mine alone._
 
 ## Prerequisites
 
@@ -61,7 +61,7 @@ sbctl sign -s /usr/lib/fwupd/efi/fwupdx64.efi -o /usr/lib/fwupd/efi/fwupdx64.efi
 
 ## Using Unified Kernel Images
 
-The default scripts to create the initrd do not handle unified images very well, so we have to write custom logic. These custom scripts might break for edge cases, but they *work for me*.
+The default scripts to create the initrd do not handle unified images very well, so we have to write custom logic. These custom scripts might break for edge cases, but they _work for me_.
 
 ```
 sudo ln -s /dev/null /etc/kernel/install.d/50-dracut.install
@@ -73,6 +73,6 @@ wget "https://gist.githubusercontent.com/sharpenedblade/3340f3235d7d5781c6e66547
 
 ## Preparing to reboot
 
-You have to reinstall the kernel for the changes we just made to apply. **You can reboot your computer after this step.** 
+You have to reinstall the kernel for the changes we just made to apply. **You can reboot your computer after this step.**
 
 Run `dnf reinstall kernel-core`

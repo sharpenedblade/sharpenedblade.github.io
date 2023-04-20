@@ -1,0 +1,23 @@
+name: Run CI checks
+on:
+    push:
+
+jobs:
+    lint:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: checkout
+              uses: actions/checkout@v3
+
+            - name: setup
+              uses: actions/setup-node@v3
+              with:
+                  node-version: 16
+
+            - name: lint
+              run: |
+                  npm install
+                  npx prettier --check .
+                  npm run lint
+                  npm run build
