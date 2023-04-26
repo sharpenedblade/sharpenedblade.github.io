@@ -26,6 +26,20 @@
     }
 }
 
+/* Jetbrain Mono font */
+@font-face {
+    font-family: "Jetbrains Mono";
+    src: url("/fonts/JetBrainsMono[wght].woff2");
+    font-weight: 100 900;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Jetbrains Mono";
+    src: url("/fonts/JetBrainsMono-Italic[wght].woff2");
+    font-weight: 100 900;
+    font-style: italic;
+}
+
 /* Font styling */
 body {
     font-family: Jetbrains Mono;
