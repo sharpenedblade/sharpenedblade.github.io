@@ -21,7 +21,7 @@ export default function About({ aboutContent }) {
     return (
         <Layout>
             <Head>
-                <title>About</title>
+                <title>About Sharpened Blade</title>
             </Head>
             <div
                 dangerouslySetInnerHTML={{

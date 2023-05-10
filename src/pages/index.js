@@ -21,7 +21,7 @@ export default function Index({ allArticles }) {
         <>
             <Layout>
                 <Head>
-                    <title>My Title</title>
+                    <title>Sharpened Blade{"'"}s website</title>
                 </Head>
                 {allArticles.map(({ title, date, description, id }) => (
                     <ArticleLink
