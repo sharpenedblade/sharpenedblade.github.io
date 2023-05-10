@@ -26,23 +26,37 @@
     }
 }
 
-/* Jetbrain Mono font */
+/* Jetbrain Mono typeface */
 @font-face {
     font-family: "Jetbrains Mono";
-    src: url("/fonts/JetBrainsMono[wght].woff2");
+    src: url("/fonts/JetBrainsMono-roman.var.woff2");
     font-weight: 100 900;
     font-style: normal;
 }
 @font-face {
     font-family: "Jetbrains Mono";
-    src: url("/fonts/JetBrainsMono-Italic[wght].woff2");
+    src: url("/fonts/JetBrainsMono-italic.var.woff2");
     font-weight: 100 900;
     font-style: italic;
 }
 
+/* Inter typeface */
+@font-face {
+  font-family: "Inter";
+  src: url("/fonts/Inter-roman.var.woff2");
+  font-weight: 100 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("/fonts/Inter-italic.var.woff2");
+  font-weight: 100 900;
+  font-style: italic;
+}
+
 /* Font styling */
 body {
-    font-family: Jetbrains Mono;
+    font-family: Inter;
     font-size: 1rem;
     background: var(--base);
     color: var(--text);
@@ -95,4 +109,23 @@ main {
 
 nav {
     display: inline-block;
+}
+
+/* standardized, firefox-only*/
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--nord3) var(--nord2);
+}
+
+/* non-standard, webkit only (chromium +safari) */
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+*::-webkit-scrollbar-track {
+  background: var(--nord2);
+}
+*::-webkit-scrollbar-thumb {
+  background-color: var(--nord3);
+  border-radius: 12px;
 }
