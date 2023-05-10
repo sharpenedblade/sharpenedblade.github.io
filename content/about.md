@@ -8,8 +8,8 @@ This website was made with [Next.js](https://nextjs.org) and markdown. The conte
 
 ## Contact Information
 
-I will _try_ to respond somewhat quickly, but I am somewhat busy right now. Please encrypt any sensitive information and attach your gpg key. *Please* **do not** send "marketing" to me, it is going to get filtered anyway.
+I will _try_ to respond somewhat quickly, but I am somewhat busy right now. Please encrypt any sensitive information and attach your gpg key. _Please_ **do not** send "marketing" to me, it is going to get filtered anyway.
 
-- GPG key fingerprint: `03DD0873D69021C91759BA22CE6D7CB6A35EF8DD`
-- Matrix: [@sharpenedblade:matrix.org](https://matrix.to/#/@sharpenedblade:matrix.org)
-- Email: [sharpenedblade@proton.me](mailto://sharpenedblade@proton.me)
+-   GPG key fingerprint: `03DD0873D69021C91759BA22CE6D7CB6A35EF8DD`
+-   Matrix: [@sharpenedblade:matrix.org](https://matrix.to/#/@sharpenedblade:matrix.org)
+-   Email: [sharpenedblade@proton.me](mailto://sharpenedblade@proton.me)

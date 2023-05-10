@@ -42,16 +42,16 @@
 
 /* Inter typeface */
 @font-face {
-  font-family: "Inter";
-  src: url("/fonts/Inter-roman.var.woff2");
-  font-weight: 100 900;
-  font-style: normal;
+    font-family: "Inter";
+    src: url("/fonts/Inter-roman.var.woff2");
+    font-weight: 100 900;
+    font-style: normal;
 }
 @font-face {
-  font-family: "Inter";
-  src: url("/fonts/Inter-italic.var.woff2");
-  font-weight: 100 900;
-  font-style: italic;
+    font-family: "Inter";
+    src: url("/fonts/Inter-italic.var.woff2");
+    font-weight: 100 900;
+    font-style: italic;
 }
 
 /* Font styling */
@@ -113,19 +113,19 @@ nav {
 
 /* standardized, firefox-only*/
 * {
-  scrollbar-width: thin;
-  scrollbar-color: var(--nord3) var(--nord2);
+    scrollbar-width: thin;
+    scrollbar-color: var(--nord3) var(--nord2);
 }
 
 /* non-standard, webkit only (chromium +safari) */
 *::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+    width: 8px;
+    height: 8px;
 }
 *::-webkit-scrollbar-track {
-  background: var(--nord2);
+    background: var(--nord2);
 }
 *::-webkit-scrollbar-thumb {
-  background-color: var(--nord3);
-  border-radius: 12px;
+    background-color: var(--nord3);
+    border-radius: 12px;
 }
