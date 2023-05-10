@@ -1,5 +1,6 @@
 // Copyright (c) 2022-2023 Sharpened Blade
 
+import Head from "next/head";
 import Layout from "../../components/layout";
 import {
     markdownToHtml,
@@ -35,6 +36,9 @@ export async function getStaticProps({ params }) {
 export default function Article({ articleData }) {
     return (
         <Layout>
+            <Head>
+                <title>{articleData.title}</title>
+            </Head>
             <div>
                 <h1>{articleData.title}</h1>
                 <div
