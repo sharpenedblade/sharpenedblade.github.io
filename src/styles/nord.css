@@ -21,86 +21,70 @@ Created for the clean- and minimal flat design pattern to achieve a optimal focu
 highlighting and UI.
 It consists of a total of sixteen, carefully selected, dimmed pastel colors for a eye-comfortable, but yet colorful
 ambiance.
-Styleguide Nord
+
 */
 
 :root {
     /*
   Base component color of "Polar Night".
   Used for texts, backgrounds, carets and structuring characters like curly- and square brackets.
-  Markup:
-  <div style="background-color:#2e3440; width=60; height=60"></div>
-  Styleguide Nord - Polar Night
+  palette: Polar Night
   */
-    --nord0: #2e3440;
+    --nord0: oklch(32.44% 0.023 264.18);
 
     /*
   Lighter shade color of the base component color.
   Used as a lighter background color for UI elements like status bars.
-  Markup:
-  <div style="background-color:#3b4252; width=60; height=60"></div>
-  Styleguide Nord - Polar Night
+  palette: Polar Night
   */
-    --nord1: #3b4252;
+    --nord1: oklch(37.92% 0.029 266.47);
 
     /*
   Lighter shade color of the base component color.
   Used as line highlighting in the editor.
   In the UI scope it may be used as selection- and highlight color.
-  Markup:
-  <div style="background-color:#434c5e; width=60; height=60"></div>
-  Styleguide Nord - Polar Night
+  palette: Polar Night
   */
-    --nord2: #434c5e;
+    --nord2: oklch(41.57% 0.032 264.13);
 
     /*
   Lighter shade color of the base component color.
   Used for comments, invisibles, indent- and wrap guide marker.
   In the UI scope used as pseudoclass color for disabled elements.
-  Markup:
-  <div style="background-color:#4c566a; width=60; height=60"></div>
-  Styleguide Nord - Polar Night
+  palette: Polar Night
   */
-    --nord3: #4c566a;
+    --nord3: oklch(45.23% 0.035 264.13);
 
     /*
   Base component color of "Snow Storm".
   Main color for text, variables, constants and attributes.
   In the UI scope used as semi-light background depending on the theme shading design.
-  Markup:
-  <div style="background-color:#d8dee9; width=60; height=60"></div>
-  Styleguide Nord - Snow Storm
+  palette: Snow Storm
   */
-    --nord4: #d8dee9;
+    --nord4: oklch(89.93% 0.016 262.75);
 
     /*
   Lighter shade color of the base component color.
   Used as a lighter background color for UI elements like status bars.
   Used as semi-light background depending on the theme shading design.
-  Markup:
-  <div style="background-color:#e5e9f0; width=60; height=60"></div>
-  Styleguide Nord - Snow Storm
+  palette: Snow Storm
   */
-    --nord5: #e5e9f0;
+    --nord5: oklch(93.3% 0.01 261.79);
 
     /*
   Lighter shade color of the base component color.
   Used for punctuations, carets and structuring characters like curly- and square brackets.
   In the UI scope used as background, selection- and highlight color depending on the theme shading design.
-  Markup:
-  <div style="background-color:#eceff4; width=60; height=60"></div>
-  Styleguide Nord - Snow Storm
+  palette: Snow Storm
   */
-    --nord6: #eceff4;
+    --nord6: oklch(95.13% 0.007 260.73);
 
     /*
   Bluish core color.
   Used for classes, types and documentation tags.
-  Markup:
-  <div style="background-color:#8fbcbb; width=60; height=60"></div>
-  Styleguide Nord - Frost
+  palette: Frost
   */
-    --nord7: #8fbcbb;
+    --nord7: oklch(76.29% 0.048 194.49);
 
     /*
   Bluish core accent color.
@@ -109,75 +93,59 @@ Styleguide Nord
   Can be used for
     - Markup quotes
     - Markup link URLs
-  Markup:
-  <div style="background-color:#88c0d0; width=60; height=60"></div>
-  Styleguide Nord - Frost
+  palette: Frost
   */
-    --nord8: #88c0d0;
+    --nord8: oklch(77.46% 0.062 217.47);
 
     /*
   Bluish core color.
   Used for language-specific syntactic/reserved support characters and keywords, operators, tags, units and
   punctuations like (semi)colons,commas and braces.
-  Markup:
-  <div style="background-color:#81a1c1; width=60; height=60"></div>
-  Styleguide Nord - Frost
+  palette: Frost
   */
-    --nord9: #81a1c1;
+    --nord9: oklch(69.65% 0.059 248.69);
 
     /*
   Bluish core color.
   Used for markup doctypes, import/include/require statements, pre-processor statements and at-rules (`@`).
-  Markup:
-  <div style="background-color:#5e81ac; width=60; height=60"></div>
-  Styleguide Nord - Frost
+  palette: Frost
   */
-    --nord10: #5e81ac;
+    --nord10: oklch(59.44% 0.077 254.03);
 
     /*
   Colorful component color.
   Used for errors, git/diff deletion and linter marker.
-  Markup:
-  <div style="background-color:#bf616a; width=60; height=60"></div>
-  Styleguide Nord - Aurora
+  palette: Aurora
   */
-    --nord11: #bf616a;
+    --nord11: oklch(60.61% 0.121 15.34);
 
     /*
   Colorful component color.
   Used for annotations.
-  Markup:
-  <div style="background-color:#d08770; width=60; height=60"></div>
-  Styleguide Nord - Aurora
+  palette: Aurora
   */
-    --nord12: #d08770;
+    --nord12: oklch(69.29% 0.096 38.24);
 
     /*
   Colorful component color.
   Used for escape characters, regular expressions and markup entities.
   In the UI scope used for warnings and git/diff renamings.
-  Markup:
-  <div style="background-color:#ebcb8b; width=60; height=60"></div>
-  Styleguide Nord - Aurora
+  palette: Aurora
   */
-    --nord13: #ebcb8b;
+    --nord13: oklch(85.49% 0.089 84.09);
 
     /*
   Colorful component color.
   Main color for strings and attribute values.
   In the UI scope used for git/diff additions and success visualizations.
-  Markup:
-  <div style="background-color:#a3be8c; width=60; height=60"></div>
-  Styleguide Nord - Aurora
+  palette: Aurora
   */
-    --nord14: #a3be8c;
+    --nord14: oklch(76.83% 0.075 131.06);
 
     /*
   Colorful component color.
   Used for numbers.
-  Markup:
-  <div style="background-color:#b48ead; width=60; height=60"></div>
-  Styleguide Nord - Aurora
+  palette: Aurora
   */
-    --nord15: #b48ead;
+    --nord15: oklch(69.21% 0.062 332.66);
 }
