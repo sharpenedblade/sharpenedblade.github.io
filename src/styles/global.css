@@ -1,4 +1,7 @@
 /* Copyright (c) 2022-2023 Sharpened Blade */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 /* Light */
 @media (prefers-color-scheme: light) {
@@ -52,14 +55,6 @@
     src: url("/fonts/Inter-italic.var.woff2");
     font-weight: 100 900;
     font-style: italic;
-}
-
-/* Font styling */
-body {
-    font-family: Inter;
-    font-size: 1rem;
-    background: var(--base);
-    color: var(--text);
 }
 
 a {
