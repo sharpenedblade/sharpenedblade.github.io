@@ -1,9 +1,0 @@
-/* Copyright (c) 2022-2023 Sharpened Blade */
-
-.layout_wrapper {
-    justify-content: flex-start;
-    flex-direction: column;
-    display: flex;
-    min-height: 100vh;
-    margin: 0px;
-}

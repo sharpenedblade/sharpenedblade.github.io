@@ -2,12 +2,11 @@
 
 import Head from "next/head";
 import Footer from "@/components/footer.js";
-import styles from "@/styles/layout.module.css";
 import Header from "@/components/header.js";
 
 export default function Layout({ children }) {
     return (
-        <div className={styles.layout_wrapper}>
+        <div className="flex-col flex min-h-screen">
             <Head>
                 <link rel="icon" href="/favico.ico"></link>
             </Head>
