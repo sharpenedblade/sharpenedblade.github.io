@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function ArticleLink({ path, name, description, date, id }) {
     return (
         <article className="my-8 space-x-2" key={id}>
-            <time dateTime={date} className="text-nord4 text-sm">
+            <time dateTime={date} className="text-sm text-nord4">
                 {date}
             </time>
             <Link href={path} className="text-xl text-nord8 font-bold hover:underline">

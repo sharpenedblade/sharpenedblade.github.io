@@ -6,7 +6,7 @@ import Header from "@/components/header.js";
 
 export default function Layout({ children }) {
     return (
-        <div className="flex-col flex min-h-screen">
+        <div className="flex min-h-screen flex-col">
             <Head>
                 <link rel="icon" href="/favico.ico"></link>
             </Head>
