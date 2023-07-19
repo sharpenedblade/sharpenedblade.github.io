@@ -89,19 +89,3 @@ pre {
 pre code {
     border: none;
 }
-
-/* Layout */
-body {
-    margin: 0px;
-}
-
-main {
-    flex: 1;
-    margin: 0.5rem;
-    margin-left: 15%;
-    margin-right: 15%;
-}
-
-nav {
-    display: inline-block;
-}

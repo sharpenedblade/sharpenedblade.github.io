@@ -6,12 +6,11 @@ import Header from "@/components/header.js";
 
 export default function Layout({ children }) {
     return (
-        <div className="flex min-h-screen flex-col">
-            <Head>
-                <link rel="icon" href="/favico.ico"></link>
-            </Head>
+        <div className="flex min-h-screen flex-col items-center  ">
             <Header></Header>
-            <main>{children}</main>
+            <main className="m-3 flex max-w-max flex-grow flex-col">
+                {children}
+            </main>
             <Footer></Footer>
         </div>
     );

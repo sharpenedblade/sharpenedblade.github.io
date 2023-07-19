@@ -5,8 +5,10 @@ import { Html, Head, Main, NextScript } from "next/document";
 export default function Document() {
     return (
         <Html lang="en">
-            <Head />
-            <body className="bg-nord0 text-nord4">
+            <Head>
+                <link rel="icon" href="/favico.ico"></link>
+            </Head>
+            <body className="m-0 bg-nord0 text-nord4">
                 <Main />
                 <NextScript />
             </body>
