@@ -12,29 +12,29 @@ EDK2 (tianocore) is a UEFI reference implementation that is almost entirely FOSS
 
 There are two main ways to get the required dependencies, you can either use a pre-built Fedora or Ubuntu container from tianocore, or you can install the dependencies manually. Installing the dependencies manually gives you more freedom, but the container is easier to use and is supported by tianocore.
 
-### Using the official container
+-   ### Using the official container
 
-Tianocore provides a container with the required dependencies already installed. Run the container with podman:
-
-```bash
-podman run -it --name edk2-build -v ~/:/root/ ghcr.io/tianocore/containers/fedora-37-build:latest
-```
-
-### Using a normal Fedora system
-
-1.  Install dependencies with DNF:
+    Tianocore provides a container with the required dependencies already installed. Run the container with podman:
 
     ```bash
-    dnf install acpica-tools dotnet-runtime-6.0 curl gcc-c++ gcc lcov libX11-devel libXext-devel libuuid-devel make nuget nasm python3 python3-distutils-extra python3-pip python3-setuptools nodejs npm
+    podman run -it --name edk2-build -v ~/:/root/ ghcr.io/tianocore/containers/fedora-37-build:latest
     ```
 
-2.  If you are cross-compiling, run:
-    ```bash
-    dnf install gcc-aarch64-linux-gnu gcc-arm-linux-gnu gcc-riscv64-linux-gnu
-    export GCC5_AARCH64_PREFIX="/usr/bin/aarch64-linux-gnu-"
-    export GCC5_ARM_PREFIX="/usr/bin/arm-linux-gnu-"
-    export GCC5_RISCV64_PREFIX="/usr/bin/riscv64-linux-gnu-"
-    ```
+-   ### Using a normal Fedora system
+
+    1. Install dependencies with DNF:
+
+        ```bash
+        dnf install acpica-tools dotnet-runtime-6.0 curl gcc-c++ gcc lcov libX11-devel libXext-devel libuuid-devel make nuget nasm python3 python3-distutils-extra python3-pip python3-setuptools nodejs npm
+        ```
+
+    2. If you are cross-compiling, run:
+        ```bash
+        dnf install gcc-aarch64-linux-gnu gcc-arm-linux-gnu gcc-riscv64-linux-gnu
+        export GCC5_AARCH64_PREFIX="/usr/bin/aarch64-linux-gnu-"
+        export GCC5_ARM_PREFIX="/usr/bin/arm-linux-gnu-"
+        export GCC5_RISCV64_PREFIX="/usr/bin/riscv64-linux-gnu-"
+        ```
 
 ## Setting up EDK2
 
@@ -91,7 +91,7 @@ podman run -it --name edk2-build -v ~/:/root/ ghcr.io/tianocore/containers/fedor
 
 3.  The results of the build can be found in `./Build`
 
-### Example config for building OVMF
+## Example config for building OVMF
 
 This will build OVMF for x86_64 with secure boot and TPM support enabled.
 

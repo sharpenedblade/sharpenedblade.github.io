@@ -10,9 +10,7 @@ Modern linux distributions sign the kernel and the bootloader/shim, but leave th
 
 Why don't distros just fix this security problem on supported hardware? It's _complicated_, but some distros are working on it. The existing solution to encrypt all of `/boot` is very fragile, and it also relies on support in `GRUB2`. There is a better way to fix the initrd hole, using modern UEFI features, without invasive system changes. How? By using `systemd-boot`, `sbctl`, `dracut`, and some clever scripts. We are going to create and sign a unified kernel image, then boot it with `systemd-boot`.
 
-## Disclaimer
-
-_I am not responsible for any bricked computers, loss of important data, wasted time, and/or other problems caused by this article. The views expressed in this article are mine and mine alone._
+_I am not responsible for any bricked computers, loss of important data, wasted time, and/or other problems caused by this article._
 
 ## Prerequisites
 
