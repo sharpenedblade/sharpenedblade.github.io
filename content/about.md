@@ -1,6 +1,4 @@
-# About
-
-## This website
+# About This Website
 
 I write about topics related to linux and free software. If you spot an error or want to suggest an improvement, open an issue or send me an email.
 

@@ -2,17 +2,15 @@
 
 import Head from "next/head";
 import Footer from "@/components/footer.js";
-import styles from "@/styles/layout.module.css";
 import Header from "@/components/header.js";
 
 export default function Layout({ children }) {
     return (
-        <div className={styles.layout_wrapper}>
-            <Head>
-                <link rel="icon" href="/favico.ico"></link>
-            </Head>
+        <div className="flex min-h-screen flex-col items-center  ">
             <Header></Header>
-            <main>{children}</main>
+            <main className="my-8 flex max-w-max flex-grow flex-col">
+                {children}
+            </main>
             <Footer></Footer>
         </div>
     );
