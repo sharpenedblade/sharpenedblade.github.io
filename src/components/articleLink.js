@@ -10,7 +10,7 @@ export default function ArticleLink({ path, name, description, date, id }) {
             </time>
             <Link
                 href={path}
-                className="text-xl font-bold text-nord8 hover:underline"
+                className="text-xl font-semibold text-nord8 hover:underline"
             >
                 {name}
             </Link>

@@ -24,6 +24,7 @@ module.exports = {
                         "--tw-prose-td-borders": theme("colors.nord5"),
                         a: {
                             textDecoration: "none",
+                            "@apply font-semibold": {},
                             "&:hover": {
                                 textDecoration: "underline",
                             },
