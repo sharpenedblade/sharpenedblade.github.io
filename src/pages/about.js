@@ -27,7 +27,7 @@ export default function About({ aboutContent }) {
                 dangerouslySetInnerHTML={{
                     __html: aboutContent,
                 }}
-                className="inline w-[70ch] max-w-[80vw]"
+                className="prose w-[70ch] max-w-[80vw]"
             ></div>
         </Layout>
     );

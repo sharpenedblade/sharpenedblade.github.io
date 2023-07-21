@@ -2,7 +2,36 @@
 module.exports = {
     content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
     theme: {
-        extend: {},
+        extend: {
+            typography: ({ theme }) => ({
+                DEFAULT: {
+                    css: {
+                        "--tw-prose-body": theme("colors.nord4"),
+                        "--tw-prose-links": theme("colors.nord8"),
+                        "--tw-prose-headings": theme("colors.nord6"),
+                        "--tw-prose-code": theme("colors.nord4"),
+                        "--tw-prose-pre-bg": theme("colors.nord1"),
+                        "--tw-prose-pre-code": theme("colors.nord4"),
+                        "--tw-prose-lead": theme("colors.nord4"),
+                        "--tw-prose-bold": theme("colors.nord6"),
+                        "--tw-prose-bullets": theme("colors.nord5"),
+                        "--tw-prose-counters": theme("colors.nord5"),
+                        "--tw-prose-quotes": theme("colors.nord5"),
+                        "--tw-prose-quote-borders": theme("colors.nord3"),
+                        "--tw-prose-captions": theme("colors.nord5"),
+                        "--tw-prose-hr": theme("colors.nord5"),
+                        "--tw-prose-th-borders": theme("colors.nord5"),
+                        "--tw-prose-td-borders": theme("colors.nord5"),
+                        a: {
+                            textDecoration: "none",
+                            "&:hover": {
+                                textDecoration: "underline",
+                            },
+                        },
+                    },
+                },
+            }),
+        },
         colors: {
             nord0: "oklch(32.44% 0.023 264.18)",
             nord1: "oklch(37.92% 0.029 266.47)",
@@ -26,5 +55,5 @@ module.exports = {
             monospace: ["Jetbrains Mono", "monospace"],
         },
     },
-    plugins: [],
+    plugins: [require("@tailwindcss/typography")],
 };
