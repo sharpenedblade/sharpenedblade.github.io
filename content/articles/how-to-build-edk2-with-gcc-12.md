@@ -4,6 +4,8 @@ date: "2023-04-16"
 description: How to build tianocore on a modern linux system.
 ---
 
+# How to build EDK2 with GCC 12
+
 EDK2 (tianocore) is a UEFI reference implementation that is almost entirely FOSS. Sadly, the documentation is _lacking_, and building it on modern systems takes a lot of trial and error. The easiest method was to use a Ubuntu 16.06 container, but a new build system was fully adopted a few months ago. This made it much easier to build, although the docs are still wrong in a few places. After looking at the new CI code, I managed to get a working build on a fresh Fedora 37 install.
 
 ## Setting Up the Build Environment

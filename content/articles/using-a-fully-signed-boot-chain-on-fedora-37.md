@@ -4,6 +4,8 @@ date: "2023-02-16"
 description: The tooling for a fully signed boot chain already exists, how do we use it?
 ---
 
+# Using a Fully Signed Boot Chain on Fedora 37
+
 Modern linux distributions sign the kernel and the bootloader/shim, but leave the initrd completely unprotected. If the initrd is comprimised, then an attacker can steal your LUKS passphrase, tamper with the rest of you system, or do other bad things. It has been technically possible to fix this massive security hole for a long time, so why don't popular distributions do something about it? It turns out that fixing the gaping initrd hole might prevent people from running these distros on old/niche hardware.
 
 Why don't distros just fix this security problem on supported hardware? It's _complicated_, but some distros are working on it. The existing solution to encrypt all of `/boot` is very fragile, and it also relies on support in `GRUB2`. There is a better way to fix the initrd hole, using modern UEFI features, without invasive system changes. How? By using `systemd-boot`, `sbctl`, `dracut`, and some clever scripts. We are going to create and sign a unified kernel image, then boot it with `systemd-boot`.
