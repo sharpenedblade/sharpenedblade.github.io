@@ -1,20 +1,20 @@
 // Copyright (c) 2022-2023 Sharpened Blade
 
-import styles from "@/styles/articleLink.module.css";
 import Link from "next/link";
 
 export default function ArticleLink({ path, name, description, date, id }) {
     return (
-        <article className={styles.article} key={id}>
-            <div>
-                <time dateTime={date} className={styles.date}>
-                    {date}
-                </time>{" "}
-                <Link href={path} className={styles.link}>
-                    {name}
-                </Link>
-            </div>
-            <p className={styles.description}>{description}</p>
+        <article className="my-4 space-x-2" key={id}>
+            <time dateTime={date} className="text-sm text-nord4">
+                {date}
+            </time>
+            <Link
+                href={path}
+                className="text-xl font-semibold text-nord8 hover:underline"
+            >
+                {name}
+            </Link>
+            <p className="ml-4">{description}</p>
         </article>
     );
 }

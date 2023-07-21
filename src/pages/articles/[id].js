@@ -39,8 +39,7 @@ export default function Article({ articleData }) {
             <Head>
                 <title>{articleData.title}</title>
             </Head>
-            <div>
-                <h1>{articleData.title}</h1>
+            <div className="prose w-[70ch] max-w-[80vw]">
                 <div
                     dangerouslySetInnerHTML={{
                         __html: articleData.content,
