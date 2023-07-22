@@ -9,12 +9,14 @@
     src: url("/fonts/JetBrainsMono-roman.var.woff2");
     font-weight: 100 900;
     font-style: normal;
+    font-display: swap;
 }
 @font-face {
     font-family: "Jetbrains Mono";
     src: url("/fonts/JetBrainsMono-italic.var.woff2");
     font-weight: 100 900;
     font-style: italic;
+    font-display: swap;
 }
 
 /* Inter typeface */
@@ -23,10 +25,12 @@
     src: url("/fonts/Inter-roman.var.woff2");
     font-weight: 100 900;
     font-style: normal;
+    font-display: swap;
 }
 @font-face {
     font-family: "Inter";
     src: url("/fonts/Inter-italic.var.woff2");
     font-weight: 100 900;
     font-style: italic;
+    font-display: swap;
 }
