@@ -3,7 +3,7 @@
 export default function Footer() {
     return (
         <footer className="fg-nord6 min-w-full bg-nord1 py-0.5 text-center text-sm">
-            <p>
+            <p className="bg-nord1 text-nord4">
                 <a
                     className="font-semibold text-nord8 hover:underline"
                     href="https://github.com/sharpenedblade/sharpenedblade.github.io"
