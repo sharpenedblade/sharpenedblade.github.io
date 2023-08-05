@@ -8,7 +8,7 @@ export default function Document() {
             <Head>
                 <link rel="icon" href="/favico.ico"></link>
             </Head>
-            <body className="m-0 bg-nord0 text-nord4">
+            <body className="m-0 bg-nord0">
                 <Main />
                 <NextScript />
             </body>

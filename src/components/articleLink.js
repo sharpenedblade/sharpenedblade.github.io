@@ -14,7 +14,7 @@ export default function ArticleLink({ path, name, description, date, id }) {
             >
                 {name}
             </Link>
-            <p className="ml-4">{description}</p>
+            <p className="ml-4 text-nord4">{description}</p>
         </article>
     );
 }
