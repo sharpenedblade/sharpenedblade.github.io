@@ -19,10 +19,10 @@ export async function getStaticProps() {
 export default function Index({ allArticles }) {
     return (
         <>
+            <Head>
+                <title>Sharpened Blade{"'"}s website</title>
+            </Head>
             <Layout>
-                <Head>
-                    <title>Sharpened Blade{"'"}s website</title>
-                </Head>
                 {allArticles.map(({ title, date, description, id }) => (
                     <ArticleLink
                         path={"/articles/" + id}
