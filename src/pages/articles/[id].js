@@ -35,17 +35,18 @@ export async function getStaticProps({ params }) {
 
 export default function Article({ articleData }) {
     return (
-        <Layout>
+        <>
             <Head>
                 <title>{articleData.title}</title>
             </Head>
-            <div className="prose w-[70ch] max-w-[80vw]">
+            <Layout>
                 <div
+                    className="prose w-[70ch] max-w-[80vw]"
                     dangerouslySetInnerHTML={{
                         __html: articleData.content,
                     }}
                 ></div>
-            </div>
-        </Layout>
+            </Layout>
+        </>
     );
 }
