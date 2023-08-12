@@ -1,6 +1,6 @@
 // Copyright (c) 2022-2023 Sharpened Blade
 
-import Link from "next/link";
+import { InternalLink as InternalLink } from "@/components/link.js";
 
 export default function ArticleLink({ path, name, description, date, id }) {
     return (
@@ -8,12 +8,9 @@ export default function ArticleLink({ path, name, description, date, id }) {
             <time dateTime={date} className="text-sm text-nord4">
                 {date}
             </time>
-            <Link
-                href={path}
-                className="text-xl font-semibold text-nord8 hover:underline"
-            >
+            <InternalLink href={path} className="text-xl">
                 {name}
-            </Link>
+            </InternalLink>
             <p className="ml-4 text-nord4">{description}</p>
         </article>
     );
