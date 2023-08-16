@@ -1,14 +1,13 @@
 // Copyright (c) 2022-2023 Sharpened Blade
 
-import Head from "next/head";
 import Footer from "@/components/footer.js";
 import Header from "@/components/header.js";
 
 export default function Layout({ children }) {
     return (
-        <div className="flex min-h-screen flex-col items-center bg-nord0">
+        <div className="flex min-h-screen flex-col items-center bg-zinc-100 dark:bg-zinc-900">
             <Header></Header>
-            <main className="my-8 flex flex-grow flex-col">{children}</main>
+            <main className="my-1 flex flex-grow flex-col">{children}</main>
             <Footer></Footer>
         </div>
     );
