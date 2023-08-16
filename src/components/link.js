@@ -3,7 +3,7 @@ import NextLink from "next/link";
 export default function Link({ href, children, className }) {
     return (
         <a
-            className={`font-semibold text-nord8 hover:underline ${className}`}
+            className={`font-semibold text-zinc-900 hover:underline dark:text-zinc-50 ${className}`}
             href={href}
         >
             {children}
@@ -14,7 +14,7 @@ export default function Link({ href, children, className }) {
 export function InternalLink({ href, children, className }) {
     return (
         <NextLink
-            className={`font-semibold text-nord8 hover:underline ${className}`}
+            className={`font-semibold text-zinc-900 hover:underline dark:text-zinc-50 ${className}`}
             href={href}
         >
             {children}

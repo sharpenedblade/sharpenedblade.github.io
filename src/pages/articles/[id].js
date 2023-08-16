@@ -41,7 +41,7 @@ export default function Article({ articleData }) {
             </Head>
             <Layout>
                 <div
-                    className="prose w-[70ch] max-w-[80vw]"
+                    className="prose prose-zinc my-8 w-[70ch] max-w-[80vw] dark:prose-invert"
                     dangerouslySetInnerHTML={{
                         __html: articleData.content,
                     }}
