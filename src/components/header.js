@@ -1,6 +1,7 @@
 // Copyright (c) 2022-2023 Sharpened Blade
 
 import { InternalLink as InternalLink } from "@/components/link.js";
+import ThemeSwitcher from "@/components/themeSwitcher.js";
 
 export default function Header() {
     return (
@@ -10,6 +11,7 @@ export default function Header() {
                 <InternalLink href="/">Home</InternalLink>
                 <InternalLink href="/about">About</InternalLink>
             </nav>
+            <ThemeSwitcher className="absolute right-2"></ThemeSwitcher>
         </header>
     );
 }
