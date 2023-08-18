@@ -1,7 +1,7 @@
 // Copyright (c) 2022-2023 Sharpened Blade
 
-import { InternalLink as InternalLink } from "@/components/link.js";
-import ThemeSwitcher from "@/components/themeSwitcher.js";
+import { InternalLink as InternalLink } from "components/link";
+import ThemeSwitcher from "components/themeSwitcher";
 
 export default function Header() {
     return (

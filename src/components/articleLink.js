@@ -1,6 +1,6 @@
 // Copyright (c) 2022-2023 Sharpened Blade
 
-import { InternalLink as InternalLink } from "@/components/link.js";
+import { InternalLink as InternalLink } from "components/link";
 
 export default function ArticleLink({ path, name, description, date, id }) {
     return (
