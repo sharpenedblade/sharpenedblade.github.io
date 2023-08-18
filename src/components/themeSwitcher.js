@@ -1,3 +1,5 @@
+"use client";
+
 import { useTheme } from "next-themes";
 import { useState, useEffect } from "react";
 import { SunIcon, MoonIcon } from "@primer/octicons-react";

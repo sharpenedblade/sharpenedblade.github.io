@@ -1,12 +1,16 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-    content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
+    content: [
+        "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+        "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+        "./src/lib/**/*.{js,ts,jsx,tsx,mdx}",
+    ],
     darkMode: "class",
     theme: {
         extend: {},
         fontFamily: {
-            sans: ["Inter", "sans-serif"],
-            mono: ["Iosevka", "monospace"],
+            sans: ["var(--font-inter)", "sans-serif"],
+            mono: ["var(--font-iosevka)", "monospace"],
         },
     },
     plugins: [require("@tailwindcss/typography")],
