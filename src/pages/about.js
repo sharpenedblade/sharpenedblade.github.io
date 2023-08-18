@@ -27,7 +27,7 @@ export default function About({ aboutContent }) {
                 dangerouslySetInnerHTML={{
                     __html: aboutContent,
                 }}
-                className="prose prose-zinc my-8 w-[70ch] max-w-[80vw] dark:prose-invert"
+                className="prose prose-zinc my-8 dark:prose-invert"
             ></div>
         </Layout>
     );
