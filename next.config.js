@@ -1,8 +1,6 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
+export default {
     reactStrictMode: true,
     output: "export",
     trailingSlash: true,
 };
-
-module.exports = nextConfig;
