@@ -22,24 +22,24 @@
     },
     "homepage": "https://github.com/sharpenedblade/sharpenedblade.github.io#readme",
     "dependencies": {
-        "@primer/octicons-react": "^19.5.0",
-        "eslint": "^8.38.0",
+        "@primer/octicons-react": "^19.7.0",
+        "eslint": "^8.48.0",
         "gray-matter": "^4.0.3",
-        "next": "^13.4.18",
+        "next": "^13.4.19",
         "next-themes": "^0.2.1",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
-        "remark": "^14.0.2",
+        "remark": "^14.0.3",
         "remark-html": "^15.0.2"
     },
     "devDependencies": {
         "@tailwindcss/typography": "^0.5.9",
-        "autoprefixer": "^10.4.14",
-        "eslint-config-next": "^13.4.18",
-        "eslint-config-prettier": "^8.8.0",
-        "postcss": "^8.4.24",
+        "autoprefixer": "^10.4.15",
+        "eslint-config-next": "^13.4.19",
+        "eslint-config-prettier": "^8.10.0",
+        "postcss": "^8.4.29",
         "prettier": "3.0.2",
         "prettier-plugin-tailwindcss": "0.5.3",
-        "tailwindcss": "^3.3.2"
+        "tailwindcss": "^3.3.3"
     }
 }
