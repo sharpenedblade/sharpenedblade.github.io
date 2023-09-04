@@ -20,9 +20,9 @@ You need to be running a modern Fedora system, preferably at least Fedora 36. Yo
 
 First, move the EFI system partition to `/efi`.
 
-```
+```bash
 sudo mkdir /efi
-sudo sed -i `s@/boot/efi@/efi@' /etc/fstab
+sudo sed -i 's@/boot/efi@/efi@' /etc/fstab
 sudo umount /boot/efi && sudo mount /efi
 sudo ln -s /efi /boot/efi
 ```
@@ -31,7 +31,7 @@ This will move the ESP, change the mountpoint in `/etc/fstab`, then symlink our 
 
 Then remove `GRUB2` and install `systemd-boot`. **DO NOT REBOOT AFTER THIS STEP!**
 
-```
+```bash
 sudo rm sudo rm /etc/dnf/protected.d/{grub*,shim.conf}
 sudo dnf remove grubby grub2\* shim\*
 sudo bootctl install
@@ -43,7 +43,7 @@ After running this you need to reinstall the kernel with `sudo dnf reinstall ker
 
 First we have to install some utilities to help us sign the bootloader. Install [`sbctl`](https://github.com/Foxboron/sbctl), at the time of writing(2023-02-16) there are no packages for Fedora, so you have to compile and install it yourself.
 
-```
+```bash
 sbctl create-keys
 sbctl enroll-keys
 sbctl sign -s /efi/EFI/systemd/systemd-bootx64.efi
@@ -54,7 +54,7 @@ sbctl sign -s /efi/EFI/BOOT/BOOTX64.EFI
 
 `fwupd` is used to update the system with new firmware from the vendor, so it is highly recomended to use `fwupd`. It is run at boot time so it has to be signed.
 
-```
+```bash
 sbctl sign -s /efi/EFI/arch/fwupdx64.efi
 sbctl sign -s /usr/lib/fwupd/efi/fwupdx64.efi -o /usr/lib/fwupd/efi/fwupdx64.efi.signed
 ```
@@ -63,7 +63,7 @@ sbctl sign -s /usr/lib/fwupd/efi/fwupdx64.efi -o /usr/lib/fwupd/efi/fwupdx64.efi
 
 The default scripts to create the initrd do not handle unified images very well, so we have to write custom logic. These custom scripts might break for edge cases, but they _work for me_.
 
-```
+```bash
 sudo ln -s /dev/null /etc/kernel/install.d/50-dracut.install
 sudo ln -s /dev/null /etc/kernel/install.d/90-loaderentry.install
 echo "layout=uki" >> /etc/kernel/install.conf
