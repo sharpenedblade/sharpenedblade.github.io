@@ -3,8 +3,15 @@
 import { promises as fs } from "fs";
 import path from "path";
 import matter from "gray-matter";
-import { remark } from "remark";
-import html from "remark-html";
+
+import { unified } from "unified";
+import remarkParse from "remark-parse";
+import remarkRehype from "remark-rehype";
+import rehypeStringify from "rehype-stringify";
+import remarkGfm from "remark-gfm";
+import rehypeAutolinkHeadings from "rehype-autolink-headings";
+import rehypeSlug from "rehype-slug";
+import rehypeHighlight from "rehype-highlight";
 
 export const articleDir = path.join(process.cwd(), "content", "articles");
 
@@ -38,5 +45,15 @@ export async function getAllArticles() {
 }
 
 export async function markdownToHtml(markdown) {
-    return (await remark().use(html).process(markdown)).toString();
+    return String(
+        await unified()
+            .use(remarkParse)
+            .use(remarkGfm)
+            .use(remarkRehype)
+            .use(rehypeSlug)
+            .use(rehypeAutolinkHeadings)
+            .use(rehypeHighlight)
+            .use(rehypeStringify)
+            .process(markdown),
+    );
 }
