@@ -22,6 +22,9 @@
     },
     "homepage": "https://github.com/sharpenedblade/sharpenedblade.github.io#readme",
     "dependencies": {
+        "@catppuccin/highlightjs": "^0.1.3",
+        "@catppuccin/palette": "^0.2.0",
+        "@catppuccin/tailwindcss": "^0.1.6",
         "@primer/octicons-react": "^19.7.0",
         "eslint": "^8.48.0",
         "gray-matter": "^4.0.3",
@@ -49,6 +52,7 @@
         "postcss": "^8.4.29",
         "prettier": "3.0.2",
         "prettier-plugin-tailwindcss": "0.5.3",
+        "sass": "^1.69.5",
         "tailwindcss": "^3.3.3"
     }
 }

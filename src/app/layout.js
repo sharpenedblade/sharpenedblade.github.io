@@ -57,7 +57,7 @@ export default function RootLayout({ children }) {
         <html lang="en" suppressHydrationWarning>
             <head />
             <body
-                className={`${inter.variable} ${iosevka.variable} flex min-h-screen flex-col items-center bg-zinc-100 font-sans dark:bg-zinc-900`}
+                className={`${inter.variable} ${iosevka.variable} ctp-latte flex min-h-screen flex-col items-center bg-zinc-100 font-sans dark:ctp-mocha dark:bg-zinc-900`}
             >
                 <ThemeProvider attribute="class">
                     <Header></Header>

@@ -14,5 +14,10 @@ export default {
             mono: ["var(--font-iosevka)", "monospace"],
         },
     },
-    plugins: [require("@tailwindcss/typography")],
+    plugins: [
+        require("@tailwindcss/typography"),
+        require("@catppuccin/tailwindcss")({
+            prefix: "ctp",
+        }),
+    ],
 };
