@@ -1,5 +1,5 @@
 import { getArticle, getAllArticles } from "lib/articles";
-import "highlight.js/styles/dark.css";
+import "@catppuccin/highlightjs/sass/catppuccin.variables.scss";
 
 export async function generateStaticParams() {
     return (await getAllArticles()).map((article) => {
@@ -13,7 +13,7 @@ export default async function Article({ params }) {
     const articleData = await getArticle(params.id);
     return (
         <div
-            className="prose prose-zinc my-8 dark:prose-invert prose-pre:p-0"
+            className="prose prose-zinc my-8 dark:prose-invert prose-pre:bg-ctp-base"
             dangerouslySetInnerHTML={{
                 __html: articleData.content,
             }}
