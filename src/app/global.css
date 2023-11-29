@@ -2,3 +2,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.pre-ctp {
+    pre {
+        @apply border-zinc-200 border-2 border-solid dark:border-zinc-800 bg-ctp-base;
+    }
+}
