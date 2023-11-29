@@ -13,7 +13,7 @@ export default async function Article({ params }) {
     const articleData = await getArticle(params.id);
     return (
         <div
-            className="prose prose-zinc my-8 dark:prose-invert pre-ctp"
+            className="pre-ctp prose prose-zinc my-8 dark:prose-invert"
             dangerouslySetInnerHTML={{
                 __html: articleData.content,
             }}
