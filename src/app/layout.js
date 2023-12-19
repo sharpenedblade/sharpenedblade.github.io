@@ -4,6 +4,12 @@ import "./global.css";
 import localFont from "next/font/local";
 import { Metadata } from "next";
 
+export const baseUrl = "https://sharpenedblade.github.io/";
+export const metadata = {
+    title: "Sharpened Blade's Blog",
+    description: "Interesting, fun, or plain helpful stuff I wrote",
+};
+
 const inter = localFont({
     src: [
         {
@@ -48,14 +54,17 @@ const iosevka = localFont({
     display: "swap",
 });
 
-export const metadata = {
-    title: "Sharpened Blade's Website",
-};
-
 export default function RootLayout({ children }) {
     return (
         <html lang="en" suppressHydrationWarning>
-            <head />
+            <head>
+                <link
+                    rel="alternate"
+                    type="application/rss+xml"
+                    title={metadata.title}
+                    href="feed/rss"
+                />
+            </head>
             <body
                 className={`${inter.variable} ${iosevka.variable} ctp-latte flex min-h-screen flex-col items-center bg-zinc-100 font-sans dark:ctp-mocha dark:bg-zinc-900`}
             >

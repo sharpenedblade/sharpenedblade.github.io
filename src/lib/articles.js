@@ -15,12 +15,12 @@ import rehypeHighlight from "rehype-highlight";
 
 export const articleDir = path.join(process.cwd(), "content", "articles");
 
-export async function getArticle(id) {
+export async function getArticle(id, minimal = false) {
     const path = `${articleDir}/${id}.md`;
     const fileContents = await fs.readFile(path, "utf8");
 
     const metadata = matter(fileContents);
-    const content = await markdownToHtml(metadata.content);
+    const content = await markdownToHtml(metadata.content, minimal);
     // Combine the data with the id and content
     return {
         id,
@@ -29,10 +29,10 @@ export async function getArticle(id) {
     };
 }
 
-export async function getAllArticles() {
+export async function getAllArticles(minimal = false) {
     let allArticles = await Promise.all(
         (await fs.readdir(articleDir)).map((file) => {
-            return getArticle(file.replace(/\.md$/, ""));
+            return getArticle(file.replace(/\.md$/, ""), minimal);
         }),
     );
     return allArticles.sort((a, b) => {
@@ -44,16 +44,17 @@ export async function getAllArticles() {
     });
 }
 
-export async function markdownToHtml(markdown) {
-    return String(
-        await unified()
-            .use(remarkParse)
-            .use(remarkGfm)
-            .use(remarkRehype)
+export async function markdownToHtml(markdown, minimal = false) {
+    let parser = unified()
+        .use(remarkParse)
+        .use(remarkGfm)
+        .use(remarkRehype)
+        .use(rehypeStringify);
+    if (!minimal) {
+        parser = parser
             .use(rehypeSlug)
             .use(rehypeAutolinkHeadings)
-            .use(rehypeHighlight)
-            .use(rehypeStringify)
-            .process(markdown),
-    );
+            .use(rehypeHighlight);
+    }
+    return String(await parser.process(markdown));
 }
