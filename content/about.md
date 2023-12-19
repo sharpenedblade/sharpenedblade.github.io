@@ -1,6 +1,4 @@
-# About Me
-
-I write about topics related to linux and free software, and I maintain a Fedora remix for linux on T2 macs. I dont have a lot of free time right now, so I might "disappear" for a while.
+I write about interesting, fun, or plain helpful stuff. I currently maintain a Fedora remix for linux on T2 macs, though I dont have a lot of free time right now, so I might "disappear" for a while.
 
 ## Contact Information
 
