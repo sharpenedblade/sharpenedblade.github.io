@@ -65,6 +65,14 @@ export default function RootLayout({ children }) {
                     href="feed/rss"
                 />
             </head>
+            <head>
+                <link
+                    rel="alternate"
+                    type="application/feed+json"
+                    title={metadata.title}
+                    href="feed/json"
+                />
+            </head>
             <body
                 className={`${inter.variable} ${iosevka.variable} ctp-latte flex min-h-screen flex-col items-center bg-zinc-100 font-sans dark:ctp-mocha dark:bg-zinc-900`}
             >
