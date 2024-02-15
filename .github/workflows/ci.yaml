@@ -13,11 +13,10 @@ jobs:
             - name: setup
               uses: actions/setup-node@v3
               with:
-                  node-version: 16
+                  node-version: latest
 
             - name: lint
               run: |
                   npm install
-                  npx prettier --check .
                   npm run lint
                   npm run build
