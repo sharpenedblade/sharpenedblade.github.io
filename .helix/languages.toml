@@ -19,3 +19,8 @@ auto-format = true
 name = "typescript"
 formatter = { command = "npx", args = ["prettier", "--parser", "typescript"] }
 auto-format = true
+
+[[language]]
+name = "svelte"
+formatter = { command = "npx", args = ["prettier", "--parser", "svelte"] }
+auto-format = true
