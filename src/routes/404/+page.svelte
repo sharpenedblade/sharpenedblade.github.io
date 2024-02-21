@@ -1,11 +1,6 @@
-<script>
-    import { page } from "$app/stores";
-</script>
-
+<!-- Copy of +error.svelte for a static 404 page -->
 <div class="my-8 max-w-prose">
-    <h1 class="text-4xl font-bold">
-        Error {$page.status}: {$page.error.message}
-    </h1>
+    <h1 class="text-4xl font-bold">Error 404: Not Found</h1>
     <p>
         <a
             href="https://github.com/sharpenedblade/sharpenedblade.github.io/issues/new"
