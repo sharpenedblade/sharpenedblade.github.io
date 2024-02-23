@@ -12,22 +12,31 @@ import rehypeSlug from "rehype-slug";
 
 export const articleDir = path.join(process.cwd(), "content", "articles");
 
-export async function getArticle(id, minimal = false) {
+export type Article = {
+    id: string;
+    content: string;
+    title: string;
+    date: Date;
+    description: string;
+};
+
+export async function getArticle(id: string, minimal = false) {
     const path = `${articleDir}/${id}.md`;
     const fileContents = await fs.readFile(path, "utf8");
 
-    const metadata = matter(fileContents);
-    const content = await markdownToHtml(metadata.content, minimal);
-    // Combine the data with the id and content
-    return {
+    const matter_data = matter(fileContents);
+    const article: Article = {
         id,
-        content: content,
-        ...metadata.data,
+        content: await markdownToHtml(matter_data.content, minimal),
+        date: new Date(matter_data.data.date),
+        title: matter_data.data.title,
+        description: matter_data.data.description,
     };
+    return article;
 }
 
-export async function getAllArticles(minimal = false) {
-    let allArticles = await Promise.all(
+export async function getAllArticles(minimal = false): Promise<Article[]> {
+    const allArticles = await Promise.all(
         (await fs.readdir(articleDir)).map((file) => {
             return getArticle(file.replace(/\.md$/, ""), minimal);
         }),
@@ -41,7 +50,7 @@ export async function getAllArticles(minimal = false) {
     });
 }
 
-export async function markdownToHtml(markdown, minimal = false) {
+export async function markdownToHtml(markdown: string, minimal = false) {
     let parser = unified()
         .use(remarkParse)
         .use(remarkGfm)

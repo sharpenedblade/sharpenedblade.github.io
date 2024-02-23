@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
     export let data;
     console.log(data.articles);
     import ArticleLink from "$lib/components/articleLink.svelte";
