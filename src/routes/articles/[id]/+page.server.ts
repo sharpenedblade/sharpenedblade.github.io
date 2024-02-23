@@ -1,10 +1,10 @@
-import { getArticle } from "$lib/articles";
+import { getArticle, type Article } from "$lib/articles";
 import { error } from "@sveltejs/kit";
 
 export const prerender = true;
 
 export async function load({ params }) {
-    let article;
+    let article: Article;
     try {
         article = await getArticle(params.id);
     } catch {
