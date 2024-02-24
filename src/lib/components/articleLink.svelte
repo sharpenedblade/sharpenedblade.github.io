@@ -7,7 +7,7 @@
         dateTime={date.toISOString()}
         class=" text-sm text-zinc-600 dark:text-zinc-300"
     >
-        {date}
+        {date.toLocaleDateString()}
     </time>
     <a href="/articles/{id}" class="text-xl font-bold">
         {title}

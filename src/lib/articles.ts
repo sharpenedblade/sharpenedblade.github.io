@@ -9,6 +9,7 @@ import rehypeStringify from "rehype-stringify";
 import remarkGfm from "remark-gfm";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypeSlug from "rehype-slug";
+import rehypeHighlight from "rehype-highlight";
 
 export const articleDir = path.join(process.cwd(), "content", "articles");
 
@@ -57,7 +58,10 @@ export async function markdownToHtml(markdown: string, minimal = false) {
         .use(remarkRehype)
         .use(rehypeStringify);
     if (!minimal) {
-        parser = parser.use(rehypeSlug).use(rehypeAutolinkHeadings);
+        parser = parser
+            .use(rehypeSlug)
+            .use(rehypeAutolinkHeadings)
+            .use(rehypeHighlight);
     }
     return String(await parser.process(markdown));
 }
