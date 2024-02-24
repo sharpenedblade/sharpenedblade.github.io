@@ -4,7 +4,9 @@
 </script>
 
 <Header></Header>
-<main class="mx-8 flex flex-col flex-wrap items-center">
+<main
+    class="ctp-latte mx-8 flex flex-col flex-wrap items-center dark:ctp-mocha"
+>
     <slot />
 </main>
 

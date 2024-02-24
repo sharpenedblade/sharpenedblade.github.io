@@ -16,6 +16,9 @@
     "author": "sharpenedblade",
     "license": "MIT",
     "devDependencies": {
+        "@catppuccin/highlightjs": "^0.1.4",
+        "@catppuccin/palette": "^1.1.0",
+        "@catppuccin/tailwindcss": "^0.1.6",
         "@sveltejs/adapter-static": "^3.0.1",
         "@sveltejs/kit": "^2.0.0",
         "@sveltejs/vite-plugin-svelte": "^3.0.0",
@@ -34,6 +37,7 @@
         "prettier-plugin-svelte": "^3.1.2",
         "prettier-plugin-tailwindcss": "^0.5.11",
         "rehype-autolink-headings": "^7.1.0",
+        "rehype-highlight": "^7.0.0",
         "rehype-slug": "^6.0.0",
         "rehype-stringify": "^10.0.0",
         "remark-gfm": "^4.0.0",
@@ -51,5 +55,8 @@
     "optionalDependencies": {
         "@rollup/rollup-darwin-x64": "^4.12.0",
         "@rollup/rollup-linux-x64-gnu": "^4.12.0"
+    },
+    "dependencies": {
+        "highlight.js": "^11.9.0"
     }
 }

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 /** @type {import('tailwindcss').Config} */
 export default {
     content: ["./src/**/*.{html,js,svelte,ts}"],
@@ -8,5 +9,10 @@ export default {
             mono: ["Iosevka", "monospace"],
         },
     },
-    plugins: [require("@tailwindcss/typography")],
+    plugins: [
+        require("@tailwindcss/typography"),
+        require("@catppuccin/tailwindcss")({
+            prefix: "ctp",
+        }),
+    ],
 };
