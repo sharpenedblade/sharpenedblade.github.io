@@ -2,7 +2,9 @@
     export let id: string, date: Date, description: string, title: string;
 </script>
 
-<article class="my-4 flex max-w-prose flex-col">
+<article
+    class="flex max-w-prose flex-col border-t border-zinc-200 py-4 first-of-type:border-none"
+>
     <time
         dateTime={date.toISOString()}
         class=" text-sm text-zinc-600 dark:text-zinc-300"

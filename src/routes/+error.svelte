@@ -13,8 +13,8 @@
     $page.error != null;
 </script>
 
-<div class="my-8 max-w-prose">
-    <h1 class="text-4xl font-bold">
+<div>
+    <h1 class="mb-4 text-3xl font-bold">
         Error {$page.status}: {error_message}
     </h1>
     <p>

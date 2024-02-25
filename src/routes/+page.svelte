@@ -13,10 +13,7 @@
 </svelte:head>
 
 <div>
-    <p class="text-small my-4 text-zinc-700 dark:text-zinc-300">
-        <a class="underline" href="feed/rss.xml"> RSS </a> and
-        <a class="underline" href="feed/feed.json"> JSON </a> feeds are supported.
-    </p>
+    <h1 class="text-2xl font-bold">All Articles</h1>
 
     {#each data.articles as article}
         <ArticleLink
