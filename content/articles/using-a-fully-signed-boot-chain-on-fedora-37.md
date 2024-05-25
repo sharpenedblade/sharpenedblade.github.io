@@ -30,8 +30,9 @@ This will move the ESP, change the mountpoint in `/etc/fstab`, then symlink our 
 Then remove `GRUB2` and install `systemd-boot`. **DO NOT REBOOT AFTER THIS STEP!**
 
 ```bash
-sudo rm sudo rm /etc/dnf/protected.d/{grub*,shim.conf}
-sudo dnf remove grubby grub2\* shim\*
+sudo rm /etc/dnf/protected.d/{grub2*,shim.conf}
+sudo dnf remove grubby grub2-efi grub2-common shim
+sudo dnf install systemd-boot sdubby
 sudo bootctl install
 ```
 
