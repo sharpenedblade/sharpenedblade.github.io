@@ -1,5 +1,5 @@
 ---
-title: Using a Fully Signed Boot Chain on Fedora 37
+title: Using a Fully Signed Boot Chain on Fedora 37 (Updated for F40)
 date: "2023-02-16"
 description: The tooling for a fully signed boot chain already exists, how do we use it?
 ---
@@ -20,8 +20,9 @@ First, move the EFI system partition to `/efi`.
 
 ```bash
 sudo mkdir /efi
-sudo sed -i 's@/boot/efi@/efi@' /etc/fstab
+sudo sed -i 's@/boot/efi@/efi@' /etc/{fstab,kernel/install.conf}
 sudo umount /boot/efi && sudo mount /efi
+sudo rmdir /boot/efi
 sudo ln -s /efi /boot/efi
 ```
 
@@ -30,8 +31,10 @@ This will move the ESP, change the mountpoint in `/etc/fstab`, then symlink our 
 Then remove `GRUB2` and install `systemd-boot`. **DO NOT REBOOT AFTER THIS STEP!**
 
 ```bash
-sudo rm sudo rm /etc/dnf/protected.d/{grub*,shim.conf}
-sudo dnf remove grubby grub2\* shim\*
+sudo rm /etc/dnf/protected.d/{grub2*,shim.conf}
+sudo dnf remove grubby grub2-efi grub2-common shim
+sudo rm -rf /boot/grub2 /boot/loader
+sudo dnf install systemd-boot sdubby
 sudo bootctl install
 ```
 
