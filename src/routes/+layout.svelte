@@ -3,6 +3,10 @@
     import "../app.css";
 </script>
 
+<svelte:head>
+    <link rel="icon" href="/favicon.png" />
+</svelte:head>
+
 <Header></Header>
 <main
     class="ctp-latte mx-8 flex flex-col flex-wrap items-center dark:ctp-mocha"
