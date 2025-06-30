@@ -1,8 +1,6 @@
-I write about interesting, fun, or plain helpful stuff. I currently maintain a Fedora remix for linux on T2 macs, though I dont have a lot of free time right now, so I might "disappear" for a while.
-
 ## Contact Information
 
-I will _try_ to respond somewhat quickly, but I am somewhat busy right now. Please encrypt any sensitive information and attach your gpg key. _Please_ **do not** send "marketing" to me, it is going to get filtered anyways.
+I will try to respond somewhat quickly, but also might not if I don't feel like it. **Do not** send "marketing" to me, I will block you if you do.
 
 -   GPG Key: [`0xCE6D7CB6A35EF8DD`](/gpg-key.pub "03DD 0873 D690 21C9 1759  BA22 CE6D 7CB6 A35E F8DD")
 -   Matrix: [@sharpenedblade:matrix.org](https://matrix.to/#/@sharpenedblade:matrix.org)
@@ -10,4 +8,4 @@ I will _try_ to respond somewhat quickly, but I am somewhat busy right now. Plea
 
 ## This Website
 
-If you spot an error or want to suggest an improvement, [open an issue](https://github.com/sharpenedblade/sharpenedblade.github.io/issues/new) or send me an email. The content on this website is under the [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) and the [code](https://github.com/sharpenedblade/sharpenedblade.github.io) is open source.
+If you spot an error or want to suggest an improvement, [open an issue](https://github.com/sharpenedblade/sharpenedblade.github.io/issues/new) or send me an email. The [code](https://github.com/sharpenedblade/sharpenedblade.github.io) for this website is open source.
