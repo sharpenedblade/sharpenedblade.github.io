@@ -14,7 +14,7 @@ jobs:
 
         steps:
             - name: checkout
-              uses: actions/checkout@v3
+              uses: actions/checkout@v4
               with:
                   lfs: "true"
 
@@ -29,9 +29,9 @@ jobs:
                   npm run build
 
             - name: deploy
-              uses: actions/upload-pages-artifact@v1
+              uses: actions/upload-pages-artifact@v3
               with:
                   path: ./build
 
             - name: publish
-              uses: actions/deploy-pages@v1
+              uses: actions/deploy-pages@v4
