@@ -1,5 +1,12 @@
 <script lang="ts">
-    export let id: string, date: Date, description: string, title: string;
+    interface Props {
+        id: string;
+        date: Date;
+        description: string;
+        title: string;
+    }
+
+    let { id, date, description, title }: Props = $props();
 </script>
 
 <article class="my-4 flex max-w-prose flex-col">

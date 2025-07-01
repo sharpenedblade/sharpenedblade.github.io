@@ -1,21 +1,15 @@
 <script lang="ts">
-    import { page } from "$app/stores";
-    let error_message: string;
-    if ($page.error) {
-        if ($page.error.message) {
-            error_message = $page.error.message;
-        } else {
-            error_message = "Unknown error";
-        }
-    } else {
-        error_message = "Unknown error";
+    import { page } from "$app/state";
+    let error_message: string = $state("Unknown error");
+    if (page.error != null && page.error.message != null) {
+        error_message = page.error.message;
     }
-    $page.error != null;
+    page.error != null;
 </script>
 
 <div class="my-8 max-w-prose">
     <h1 class="text-4xl font-bold">
-        Error {$page.status}: {error_message}
+        Error {page.status}: {error_message}
     </h1>
     <p>
         <a

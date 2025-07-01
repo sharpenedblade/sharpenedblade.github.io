@@ -1,6 +1,11 @@
-<script>
+<script lang="ts">
     import Header from "$lib/components/header.svelte";
     import "../app.css";
+    interface Props {
+        children?: import("svelte").Snippet;
+    }
+
+    let { children }: Props = $props();
 </script>
 
 <svelte:head>
@@ -11,7 +16,7 @@
 <main
     class="ctp-latte mx-8 flex flex-col flex-wrap items-center dark:ctp-mocha"
 >
-    <slot />
+    {@render children?.()}
 </main>
 
 <style lang="postcss">

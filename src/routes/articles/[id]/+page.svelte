@@ -1,6 +1,6 @@
 <script lang="ts">
-    export let data;
-    import "@catppuccin/highlightjs/sass/catppuccin.variables.scss";
+    import "@catppuccin/highlightjs/sass/catppuccin-variables.rgb.scss";
+    let { data } = $props();
 </script>
 
 <svelte:head>

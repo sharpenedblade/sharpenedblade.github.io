@@ -1,6 +1,6 @@
 <script lang="ts">
-    export let data;
     import ArticleLink from "$lib/components/articleLink.svelte";
+    let { data } = $props();
 </script>
 
 <svelte:head>

@@ -10,7 +10,7 @@ EDK2 (tianocore) is a UEFI reference implementation that is almost entirely FOSS
 
 There are two main ways to get the required dependencies, you can either use a pre-built Fedora or Ubuntu container from tianocore, or you can install the dependencies manually. Installing the dependencies manually gives you more freedom, but the container is easier to use and is supported by tianocore.
 
--   ### Using the official container
+- ### Using the official container
 
     Tianocore provides a container with the required dependencies already installed. Run the container with podman:
 
@@ -18,8 +18,7 @@ There are two main ways to get the required dependencies, you can either use a p
     podman run -it --name edk2-build -v ~/:/root/ ghcr.io/tianocore/containers/fedora-37-build:latest
     ```
 
--   ### Using a normal Fedora system
-
+- ### Using a normal Fedora system
     1. Install dependencies with DNF:
 
         ```bash
