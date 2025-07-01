@@ -1,4 +1,4 @@
-import { articleDir, getAllArticles } from "$lib/articles";
+import { getAllArticles } from "$lib/articles";
 import { create } from "xmlbuilder2";
 
 export const prerender = true;
@@ -69,8 +69,8 @@ export async function GET() {
         return {
             title: article.title,
             pubDate: new Date(article.date).toUTCString(),
-            link: baseUrl + articleDir + article.id,
-            guid: baseUrl + articleDir + article.id,
+            link: baseUrl + "articles/" + article.id,
+            guid: baseUrl + "articles/" + article.id,
             description: {
                 $: article.content,
             },

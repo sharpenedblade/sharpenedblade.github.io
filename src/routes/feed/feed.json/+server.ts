@@ -1,4 +1,4 @@
-import { articleDir, getAllArticles } from "$lib/articles";
+import { getAllArticles } from "$lib/articles";
 
 export const prerender = true;
 
@@ -43,8 +43,8 @@ export async function GET() {
         return {
             title: article.title,
             date_published: new Date(article.date).toUTCString(),
-            url: baseUrl + articleDir + article.id,
-            id: baseUrl + articleDir + article.id,
+            url: baseUrl + "articles/" + article.id,
+            id: baseUrl + "articles/" + article.id,
             content_html: article.content,
             summary: article.description,
         };
