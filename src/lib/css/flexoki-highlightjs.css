@@ -1,0 +1,83 @@
+.hljs {
+    color: var(--flexoki-tx);
+    background: var(--flexoki-bg);
+}
+
+.hljs-comment {
+    color: var(--flexoki-tx-3);
+}
+
+.hljs-operator,
+.hljs-punctuation {
+    color: var(--flexoki-tx-2);
+}
+
+.hljs-comment,
+.hljs-doctag {
+    color: var(--flexoki-tx-3);
+}
+
+.hljs-punctuation,
+.hljs-operator,
+.hljs-meta {
+    color: var(--flexoki-tx-2);
+}
+
+.hljs-string,
+.hljs-regexp,
+.hljs-char.escape_ {
+    color: var(--flexoki-cy);
+}
+
+.hljs-subst {
+    color: var(--flexoki-tx);
+}
+
+.hljs-number {
+    color: var(--flexoki-pu);
+}
+
+.hljs-keyword,
+.hljs-built_in {
+    color: var(--flexoki-gr);
+}
+
+.hljs-type {
+    color: var(--flexoki-ye);
+}
+
+.hljs-literal,
+.hljs-symbol,
+.hljs-variable.constant_ {
+    color: var(--flexoki-ye);
+}
+
+.hljs-variable.language_ {
+    color: var(--flexoki-ma);
+}
+
+.hljs-params {
+    color: var(--flexoki-tx);
+}
+
+.hljs-variable,
+.hljs-property,
+.hljs-name,
+.hljs-attribute {
+    color: var(--flexoki-bl);
+}
+
+.hljs-attr {
+    color: var(--flexoki-ye);
+}
+
+.hljs-title.function_,
+.hljs-tag {
+    color: var(--flexoki-or);
+}
+
+.hljs-title.class_,
+.hljs-title.class_.inherited__,
+.hljs-section {
+    color: var(--flexoki-ye);
+}
