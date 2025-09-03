@@ -1,24 +1,26 @@
 name: Run CI checks
 on:
-    push:
+  push:
 
 jobs:
-    lint:
-        runs-on: ubuntu-latest
+  lint:
+    runs-on: ubuntu-latest
 
-        steps:
-            - name: checkout
-              uses: actions/checkout@v3
-              with:
-                  lfs: "true"
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3
+        with:
+          lfs: "true"
 
-            - name: setup
-              uses: actions/setup-node@v3
-              with:
-                  node-version: latest
+      - name: setup
+        uses: actions/setup-node@v3
+        with:
+          node-version: latest
 
-            - name: lint
-              run: |
-                  npm install
-                  npm run lint
-                  npm run build
+      - name: setup just
+        uses: extractions/setup-just@v3
+
+      - name: lint
+        run: |
+          just deps
+          just check

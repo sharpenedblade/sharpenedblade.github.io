@@ -1,37 +1,40 @@
 name: Build Static HTML export
 on:
-    push:
-        branches:
-            - main
+  push:
+    branches:
+       - main
 
 jobs:
-    build:
-        runs-on: ubuntu-latest
+  build:
+    runs-on: ubuntu-latest
 
-        permissions:
-            pages: write
-            id-token: write
+    permissions:
+      pages: write
+      id-token: write
 
-        steps:
-            - name: checkout
-              uses: actions/checkout@v4
-              with:
-                  lfs: "true"
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+        with:
+          lfs: "true"
 
-            - name: setup
-              uses: actions/setup-node@v3
-              with:
-                  node-version: latest
+      - name: setup just
+        uses: extractions/setup-just@v3
 
-            - name: build
-              run: |
-                  npm install
-                  npm run build
+      - name: setup
+        uses: actions/setup-node@v3
+        with:
+          node-version: latest
 
-            - name: deploy
-              uses: actions/upload-pages-artifact@v3
-              with:
-                  path: ./build
+      - name: build
+        run: |
+          just deps
+          just build
 
-            - name: publish
-              uses: actions/deploy-pages@v4
+      - name: deploy
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./build
+
+      - name: publish
+        uses: actions/deploy-pages@v4
