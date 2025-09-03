@@ -6,7 +6,7 @@
         title: string;
     }
 
-    let { id, date, description, title }: Props = $props();
+    let { id, date, title }: Props = $props();
 </script>
 
 <article>
