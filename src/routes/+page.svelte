@@ -4,17 +4,13 @@
 </script>
 
 <svelte:head>
-    <title>Sharpened Blade's Blog</title>
-    <meta
-        name="description"
-        content="Obscenely boring things I write about insanely uninteresting ideas."
-    />
+    <title>sharpenedblade's Blog</title>
 </svelte:head>
 
 <div>
-    <p class="text-small my-4 text-zinc-700 dark:text-zinc-300">
-        <a class="underline" href="feed/rss.xml"> RSS </a> and
-        <a class="underline" href="feed/feed.json"> JSON </a> feeds are supported.
+    <p id="feed-info">
+        <a href="feed/rss.xml"> RSS </a> and
+        <a href="feed/feed.json"> JSON </a> feeds are supported.
     </p>
 
     {#each data.articles as article}
@@ -26,3 +22,15 @@
         />
     {/each}
 </div>
+
+<style>
+    #feed-info {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        font-size: 1rem;
+        color: var(--tx-2);
+        a {
+            color: var(--tx);
+        }
+    }
+</style>

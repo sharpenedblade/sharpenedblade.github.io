@@ -1,0 +1,83 @@
+@font-face {
+    font-family: "Libertinus Serif";
+    font-display: swap;
+    font-style: normal;
+    src: url("/fonts/LibertinusSerif-Regular.woff2");
+}
+
+@font-face {
+    font-family: "Libertinus Serif";
+    font-display: swap;
+    font-weight: 700;
+    font-style: normal;
+    src: url("/fonts/LibertinusSerif-Bold.woff2");
+}
+
+@font-face {
+    font-family: "Libertinus Serif";
+    font-display: swap;
+    font-weight: normal;
+    font-style: italic;
+    src: url("/fonts/LibertinusSerif-Italic.woff2");
+}
+
+@font-face {
+    font-family: "Libertinus Serif";
+    font-display: swap;
+    font-weight: 700;
+    font-style: italic;
+    src: url("/fonts/LibertinusSerif-BoldItalic.woff2");
+}
+
+@font-face {
+    font-family: "Libertinus Serif Display";
+    font-display: swap;
+    font-style: normal;
+    src: url("/fonts/LibertinusSerifDisplay-Regular.woff2");
+}
+
+@font-face {
+    font-family: "Inter";
+    font-display: swap;
+    font-style: normal;
+    src: url("/fonts/InterVariable.woff2");
+}
+
+@font-face {
+    font-family: "Inter";
+    font-display: swap;
+    font-style: italic;
+    src: url("/fonts/InterVariable-Italic.woff2");
+}
+
+@font-face {
+    font-family: "Iosevka";
+    font-display: swap;
+    font-weight: 400;
+    font-stretch: normal;
+    font-style: normal;
+    src: url("/fonts/Iosevka-Regular.woff2");
+}
+
+@font-face {
+    font-family: "Iosevka";
+    font-display: swap;
+    font-weight: 400;
+    font-style: italic;
+    src: url("/fonts/Iosevka-Italic.woff2");
+}
+@font-face {
+    font-family: "Iosevka";
+    font-display: swap;
+    font-weight: 700;
+    font-style: italic;
+    src: url("/fonts/Iosevka-BoldItalic.woff2");
+}
+
+@font-face {
+    font-family: "Iosevka";
+    font-display: swap;
+    font-weight: 700;
+    font-style: normal;
+    src: url("/fonts/Iosevka-Bold.woff2");
+}

@@ -1,6 +1,10 @@
 <script lang="ts">
-    import Header from "$lib/components/header.svelte";
+    import "destyle.css";
+    import "$lib/css/flexoki.css";
+    import "$lib/css/fonts.css";
     import "../app.css";
+    import "$lib/css/prose.css";
+    import Header from "$lib/components/header.svelte";
     interface Props {
         children?: import("svelte").Snippet;
     }
@@ -13,17 +17,23 @@
 </svelte:head>
 
 <Header></Header>
-<main
-    class="ctp-latte mx-8 flex flex-col flex-wrap items-center dark:ctp-mocha"
->
+<main>
     {@render children?.()}
 </main>
 
-<style lang="postcss">
-    :global(a) {
-        @apply font-semibold text-zinc-900 hover:underline dark:text-zinc-50;
+<style>
+    :global(a:hover) {
+        text-decoration: underline;
     }
     :global(body) {
-        @apply bg-zinc-100 dark:bg-zinc-900;
+        background-color: var(--bg);
+    }
+    main {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin-inline: 2rem;
+        align-items: center;
+        justify-content: center;
     }
 </style>

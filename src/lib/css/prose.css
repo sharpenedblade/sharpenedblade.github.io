@@ -1,0 +1,123 @@
+.article-title {
+    text-align: center;
+}
+/* Any element after another element has a 1em space on top, but only if it is
+a direct child for the parent div, nested elements have no spacing. Spacing is
+also added to elements inside ol, ul, li, and blockquote, which can
+additionally be nested. */
+.article-content > * + *,
+.article-content blockquote * + *,
+.article-content :is(ul, ol) > * + *,
+.article-content :is(ul, ol) > li > * + * {
+    margin-block-start: 1em;
+}
+/* Add extra margin under h1 to make things look more balanced */
+.article-content > h1 + :not(h1, h2, h3) {
+    margin-block-start: 2em;
+}
+
+.article-content {
+    font-family: "Libertinus Serif", "serif";
+    line-height: 1.5em;
+    color: var(--tx);
+    /* Spacing around horizontal rules */
+    hr {
+        border-block-start: 1px solid var(--tx);
+        margin-block: 2em;
+    }
+    /* List styling */
+    :is(ul, ol) {
+        list-style-position: outside;
+        line-height: 1.5em;
+        padding-inline-start: 2ch;
+    }
+    ul {
+        list-style-type: disc;
+    }
+    ol {
+        list-style-type: decimal;
+    }
+    /* Indent nested lists, but don't indent top level lists */
+    li li {
+        margin-inline-start: 4ch;
+    }
+    blockquote {
+        background-color: var(--bg-2);
+        padding: 1em;
+        /* Only the left edge is thick */
+        border-width: 2px;
+        border-inline-start-width: 1ch;
+        border-color: var(--border);
+        border-style: solid;
+        border-radius: 8px;
+    }
+    h1 {
+        font-size: 3rem;
+    }
+    h2 {
+        font-size: 2rem;
+    }
+    h3 {
+        font-size: 1.5rem;
+    }
+    :is(h1, h2, h3) {
+        text-wrap: balance;
+        line-height: 1.25em;
+        font-family: "Libertinus Serif Display";
+    }
+    p {
+        line-height: 1.5em;
+        /* use pretty when firefox gets support */
+        text-wrap: wrap;
+    }
+    code {
+        font-family: "Iosevka", "monospace";
+    }
+    pre {
+        border: 2px solid var(--border);
+        border-radius: 8px;
+        background: var(--bg);
+        code {
+            color: var(--tx);
+        }
+        /* Show scrollbars when content is too long */
+        overflow: auto;
+        /* Always show scrollbars if on a platform with fixed scrollbars */
+        scrollbar-gutter: stable;
+        padding: 0.25rem;
+    }
+    a {
+        text-decoration: underline;
+    }
+    table {
+        border-collapse: separate;
+        border-spacing: 0;
+        th {
+            background-color: var(--bg-2);
+        }
+        :is(th, td) {
+            padding: 0.5rem;
+            border: 2px solid var(--border);
+        }
+        /* Remove shared border to prevent stacking */
+        :is(th, td):not(:first-of-type) {
+            border-inline-start: solid 0px #000;
+        }
+        tr:not(:last-child) td, /* boxes in last table row */
+        thead th /* boxes in first table row */ {
+            border-block-end: solid 0px #000;
+        }
+        th:first-of-type {
+            border-start-start-radius: 8px;
+        }
+        th:last-of-type {
+            border-start-end-radius: 8px;
+        }
+        tr:last-of-type td:first-of-type {
+            border-end-start-radius: 8px;
+        }
+        tr:last-of-type td:last-of-type {
+            border-end-end-radius: 8px;
+        }
+    }
+}

@@ -1,7 +1,7 @@
 {
     "name": "sharpenedblade.github.io",
     "private": true,
-    "version": "3.0.0",
+    "version": "4.0.0",
     "main": "index.js",
     "type": "module",
     "scripts": {
@@ -16,13 +16,9 @@
     "author": "sharpenedblade",
     "license": "MIT",
     "devDependencies": {
-        "@catppuccin/highlightjs": "^1.0",
-        "@catppuccin/palette": "^1.1",
-        "@catppuccin/tailwindcss": "^0.1",
         "@sveltejs/adapter-static": "^3.0",
         "@sveltejs/kit": "^2.5",
         "@sveltejs/vite-plugin-svelte": "^4.0",
-        "@tailwindcss/typography": "^0.5",
         "@types/eslint": "8.56",
         "@types/node": "^20.11",
         "@typescript-eslint/eslint-plugin": "^6.0",
@@ -35,7 +31,6 @@
         "postcss": "^8.4",
         "prettier": "^3.1",
         "prettier-plugin-svelte": "^3.2",
-        "prettier-plugin-tailwindcss": "^0.5",
         "rehype-autolink-headings": "^7.1",
         "rehype-highlight": "^7.0",
         "rehype-slug": "^6.0",
@@ -46,7 +41,6 @@
         "sass-embedded": "^1.89",
         "svelte": "^5.0",
         "svelte-check": "^4.0",
-        "tailwindcss": "^3.4",
         "tslib": "^2.4",
         "typescript": "^5.5",
         "unified": "^11.0",
@@ -58,6 +52,7 @@
         "@rollup/rollup-linux-x64-gnu": "^4.12"
     },
     "dependencies": {
+        "destyle.css": "^4.0.1",
         "highlight.js": "^11.9"
     }
 }

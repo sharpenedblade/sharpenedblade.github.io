@@ -7,10 +7,8 @@
     page.error != null;
 </script>
 
-<div class="my-8 max-w-prose">
-    <h1 class="text-4xl font-bold">
-        Error {page.status}: {error_message}
-    </h1>
+<div id="error-page">
+    <h1>Error {page.status}: {error_message}</h1>
     <p>
         <a
             href="https://github.com/sharpenedblade/sharpenedblade.github.io/issues/new"
@@ -20,3 +18,24 @@
         persists.
     </p>
 </div>
+
+<style>
+    #error-page {
+        max-width: 70ch;
+        color: var(--tx);
+        h1 {
+            margin-block-start: 1em;
+            font-size: 3rem;
+            font-weight: 700;
+            text-align: center;
+        }
+        * + * {
+            margin-block-start: 2em;
+        }
+        line-height: 1.25;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+</style>
