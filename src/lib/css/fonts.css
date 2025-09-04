@@ -1,42 +1,4 @@
 @font-face {
-    font-family: "Libertinus Serif";
-    font-display: swap;
-    font-style: normal;
-    src: url("/fonts/LibertinusSerif-Regular.woff2");
-}
-
-@font-face {
-    font-family: "Libertinus Serif";
-    font-display: swap;
-    font-weight: 700;
-    font-style: normal;
-    src: url("/fonts/LibertinusSerif-Bold.woff2");
-}
-
-@font-face {
-    font-family: "Libertinus Serif";
-    font-display: swap;
-    font-weight: normal;
-    font-style: italic;
-    src: url("/fonts/LibertinusSerif-Italic.woff2");
-}
-
-@font-face {
-    font-family: "Libertinus Serif";
-    font-display: swap;
-    font-weight: 700;
-    font-style: italic;
-    src: url("/fonts/LibertinusSerif-BoldItalic.woff2");
-}
-
-@font-face {
-    font-family: "Libertinus Serif Display";
-    font-display: swap;
-    font-style: normal;
-    src: url("/fonts/LibertinusSerifDisplay-Regular.woff2");
-}
-
-@font-face {
     font-family: "Inter";
     font-display: swap;
     font-style: normal;
@@ -48,6 +10,20 @@
     font-display: swap;
     font-style: italic;
     src: url("/fonts/InterVariable-Italic.woff2");
+}
+
+@font-face {
+    font-family: "Literata";
+    font-display: swap;
+    font-style: normal;
+    src: url("/fonts/Literata[opsz,wght].woff2");
+}
+
+@font-face {
+    font-family: "Literata";
+    font-display: swap;
+    font-style: italic;
+    src: url("/fonts/Literata-Italic[opsz,wght].woff2");
 }
 
 @font-face {

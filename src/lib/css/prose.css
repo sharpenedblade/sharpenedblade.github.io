@@ -17,7 +17,8 @@ additionally be nested. */
 }
 
 .article-content {
-    font-family: "Libertinus Serif", "serif";
+    font-family: "Literata", "serif";
+    font-optical-sizing: auto;
     line-height: 1.5em;
     color: var(--tx);
     /* Spacing around horizontal rules */
@@ -73,7 +74,7 @@ additionally be nested. */
     :is(h1, h2, h3) {
         text-wrap: balance;
         line-height: 1.25em;
-        font-family: "Libertinus Serif Display";
+        font-family: "Literata";
     }
     p {
         line-height: 1.5em;
@@ -96,7 +97,7 @@ additionally be nested. */
         /* Single line paragraphs are indented too  */
         /* But there is not much CSS can do to stop this */
         text-indent: 2em;
-        margin-block-start: 0.5em;
+        margin-block-start: 0.25em;
     }
     code {
         font-family: "Iosevka", "monospace";

@@ -26,8 +26,7 @@
     article {
         color: var(--tx);
         a {
-            font-family: "Libertinus Serif";
-            font-weight: bold;
+            font-family: "Literata";
             font-size: 1.1rem;
         }
         display: flex;
