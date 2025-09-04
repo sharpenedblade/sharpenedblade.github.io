@@ -14,7 +14,7 @@
 
 <style>
     article {
-        max-width: min(70ch, calc(100vw - 2rem));
+        max-width: min(65ch, calc(100vw - 2rem));
         margin-block: 2rem;
     }
 </style>

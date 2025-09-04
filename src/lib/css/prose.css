@@ -60,6 +60,16 @@ additionally be nested. */
     h3 {
         font-size: 1.5rem;
     }
+    h4 {
+        font-size: 1.25rem;
+    }
+    h5 {
+        font-style: bold;
+    }
+    h6 {
+        font-style: bold;
+        font-size: 0.85rem;
+    }
     :is(h1, h2, h3) {
         text-wrap: balance;
         line-height: 1.25em;
@@ -67,8 +77,26 @@ additionally be nested. */
     }
     p {
         line-height: 1.5em;
-        /* use pretty when firefox gets support */
-        text-wrap: wrap;
+        hyphens: auto;
+        hyphenate-limit-chars: 6 3 3;
+        text-align: justify;
+        /* Causes some unlucky words to stretch too much */
+        /* Looks better in general though */
+        /* Only supported in firefox */
+        text-justify: inter-character;
+        /* Not supported in firefox, but mostly ignored because of text-justify */
+        text-wrap: pretty;
+        /* Not supported in any browsers for now */
+        /* hyphenate-limit-lines: 2; */
+        /* hyphenate-limit-last: always; */
+        /* hyphenate-limit-zone: 8%; */
+    }
+    /* Consecutive paragraphs are indented and are closer together */
+    p + p {
+        /* Single line paragraphs are indented too  */
+        /* But there is not much CSS can do to stop this */
+        text-indent: 2em;
+        margin-block-start: 0.5em;
     }
     code {
         font-family: "Iosevka", "monospace";
