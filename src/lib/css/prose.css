@@ -80,24 +80,12 @@ additionally be nested. */
         line-height: 1.5em;
         hyphens: auto;
         hyphenate-limit-chars: 6 3 3;
-        text-align: justify;
-        /* Causes some unlucky words to stretch too much */
-        /* Looks better in general though */
-        /* Only supported in firefox */
-        text-justify: inter-character;
-        /* Not supported in firefox, but mostly ignored because of text-justify */
+        /* Not supported in firefox */
         text-wrap: pretty;
         /* Not supported in any browsers for now */
         /* hyphenate-limit-lines: 2; */
         /* hyphenate-limit-last: always; */
         /* hyphenate-limit-zone: 8%; */
-    }
-    /* Consecutive paragraphs are indented and are closer together */
-    p + p {
-        /* Single line paragraphs are indented too  */
-        /* But there is not much CSS can do to stop this */
-        text-indent: 2em;
-        margin-block-start: 0.25em;
     }
     code {
         font-family: "Iosevka", "monospace";
