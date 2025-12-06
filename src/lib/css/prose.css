@@ -17,6 +17,7 @@ additionally be nested. */
 }
 
 .article-content {
+    text-align: justify;
     font-family: "Literata", "serif";
     font-optical-sizing: auto;
     line-height: 1.5em;
