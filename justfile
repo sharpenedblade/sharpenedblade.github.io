@@ -1,15 +1,15 @@
 deps:
-    npm install
+    pnpm install --frozen-lockfile
 build:
     # Outputs to ./build
-    npx vite build
+    pnpm vite build
     ./font-subset.py './content/**/*.md' build/fonts/*.woff2
 dev:
-    npx vite dev
+    pnpm vite dev
 check:
-    npx prettier --check .
-    npx eslint .
-    npx svelte-kit sync
-    npx svelte-check --tsconfig ./tsconfig.json
+    pnpm prettier --check .
+    pnpm eslint .
+    pnpm svelte-kit sync
+    pnpm svelte-check --tsconfig ./tsconfig.json
 format:
-    npx prettier --write .
+    pnpm prettier --write .

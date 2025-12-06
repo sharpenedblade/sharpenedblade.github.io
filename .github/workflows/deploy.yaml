@@ -21,10 +21,15 @@ jobs:
       - name: setup just
         uses: extractions/setup-just@v3
 
-      - name: setup
+      - name: setup node
         uses: actions/setup-node@v3
         with:
           node-version: latest
+
+      - name: setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
 
       - name: Install uv
         uses: astral-sh/setup-uv@v6
